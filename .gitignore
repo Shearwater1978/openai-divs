@@ -1,0 +1,7 @@
+**/__pycache__/
+broker_reports/*
+*.log
+tax_reports/*
+**/cache/
+.python-version
+
