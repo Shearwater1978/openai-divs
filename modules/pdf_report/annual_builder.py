@@ -255,7 +255,8 @@ def build_yearly_pdf_from_json(json_path: str, output_path: str):
     elements += _make_cover(year_block, styles)
     elements.append(PageBreak())
     # Assets (таблица может растягиваться на много страниц)
-    elements += make_assets_page({"years": [year_block]}, styles)
+    # elements += make_assets_page({"years": [year_block]}, styles)
+    elements += make_assets_page(year_block)
     elements.append(PageBreak())
     # Monthly summary
     elements += make_monthly_summary_page({"years": [year_block]}, styles)

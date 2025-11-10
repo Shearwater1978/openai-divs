@@ -1,44 +1,75 @@
-from reportlab.platypus import LongTable, Paragraph, Spacer, TableStyle
+# modules/pdf_report/page_assets.py
+
+from reportlab.platypus import LongTable, Paragraph, Spacer
 from reportlab.lib import colors
+from reportlab.lib.enums import TA_CENTER
+from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import cm
+
 from modules.money_utils import money
 
+styles = getSampleStyleSheet()
 
-def make_assets_page(ctx, styles):
-    year_block = ctx.get("years", [])[0]
 
-    data = [["Ticker", "Currency", "Dividends (PLN)", "Tax (PLN)", "Net (PLN)"]]
+def make_assets_page(year_block):
+    """
+    Build the 'Assets summary' table with automatic page breaking.
+    Sorted by ticker alphabetically.
+    """
 
-    # Собираем налоги по тикеру
-    tax_by_ticker = {}
+    title_style = styles["Heading2"]
+    title_style.alignment = TA_CENTER
+
+    data = [["Ticker", "Currency", "Dividends (PLN)", "Taxes (PLN)", "Net (PLN)"]]
+
+    # Build tax lookup by ticker
+    tax_map = {}
     for t in year_block.get("taxes", []):
-        tkr = t.get("ticker")
-        if tkr:
-            tax_by_ticker[tkr] = sum(money(x.get("amountPln", 0)) for x in t.get("tax", []))
+        ticker = t.get("ticker")
+        if ticker:
+            tax_map[ticker] = sum(money(x.get("amountPln", 0)) for x in t.get("tax", []))
 
-    # Строки по дивидендам
-    for d in year_block.get("dividends", []):
-        ticker = d.get("ticker", "UNKNOWN")
-        recs = d.get("dividend", []) or []
-        currency = (recs[0].get("currency") or "").upper() if recs else ""
-        div_sum = sum(money(x.get("amountPln", 0)) for x in recs)
-        tax_sum = money(tax_by_ticker.get(ticker, 0.0))
+    # Sort tickers alphabetically (requested behavior)
+    for asset in sorted(year_block.get("dividends", []), key=lambda x: x.get("ticker", "")):
+
+        ticker = asset.get("ticker", "UNKNOWN")
+        div_records = asset.get("dividend", [])
+
+        # Currency detection
+        currency = ""
+        if div_records:
+            currency = (div_records[0].get("currency") or "").upper()
+
+        # Dividends sum
+        div_sum = sum(money(x.get("amountPln", 0)) for x in div_records)
+
+        # Tax sum
+        tax_sum = money(tax_map.get(ticker, 0))
+
+        # Net = dividends + tax (tax is negative)
         net = money(div_sum + tax_sum)
-        data.append([ticker, currency, f"{div_sum:.2f}", f"{tax_sum:.2f}", f"{net:.2f}"])
 
-    table = LongTable(data, repeatRows=1, colWidths=[4.0*cm, 3.0*cm, 4.0*cm, 3.5*cm, 3.5*cm])
-    table.setStyle(TableStyle([
-        ("BACKGROUND", (0, 0), (-1, 0), colors.lightgrey),
-        ("GRID", (0, 0), (-1, -1), 0.5, colors.black),
-        ("BOX", (0, 0), (-1, -1), 1, colors.black),
-        ("ALIGN", (2, 1), (-1, -1), "RIGHT"),
-        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-        ("FONTNAME", (0, 0), (-1, -1), "DejaVuSans"),
-    ]))
+        data.append([
+            ticker,
+            currency,
+            f"{div_sum:.2f}",
+            f"{tax_sum:.2f}",
+            f"{net:.2f}",
+        ])
+
+    table = LongTable(data, repeatRows=1)
+    table.setStyle([
+        ("BACKGROUND", (0,0), (-1,0), colors.lightgrey),
+        ("GRID", (0,0), (-1,-1), 0.5, colors.black),
+        ("ALIGN", (2,1), (-1,-1), "RIGHT"),
+        ("FONTNAME", (0,0), (-1,0), "Helvetica-Bold"),
+        ("VALIGN", (0,0), (-1,-1), "MIDDLE"),
+    ])
 
     return [
-        Paragraph("Assets Summary", styles["H2Center"]),
-        Spacer(1, 0.5 * cm),
+        Spacer(0, 0.8 * cm),
+        Paragraph("Assets Summary", title_style),
+        Spacer(0, 0.3 * cm),
         table,
+        Spacer(0, 1.0 * cm),
     ]
-
