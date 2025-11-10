@@ -1,7 +1,7 @@
 # IBKR Dividend & Tax Report (Poland, PIT-38)
 <p align="center">
   <img src="https://img.shields.io/github/actions/workflow/status/Shearwater1978/openai-divs/ci.yml?branch=main&label=Tests&style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Python-3.10%20|%203.11%20|%203.12-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge" />
   <img src="https://img.shields.io/github/license/Shearwater1978/openai-divs?style=for-the-badge" />
   <img src="https://img.shields.io/github/last-commit/Shearwater1978/openai-divs?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Code%20Style-black-000000?style=for-the-badge" />
