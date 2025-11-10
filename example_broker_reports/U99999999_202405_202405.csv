@@ -1,0 +1,23 @@
+Statement,Data,Period,"May 1, 2024 - May 28, 2024"
+Dividends,Data,USD,2024-05-22,AAPL(FAKE) Cash Dividend,6.86
+Withholding Tax,Data,USD,2024-05-22,AAPL(FAKE) Cash Dividend,-1.03
+Dividends,Data,USD,2024-05-25,MSFT(FAKE) Cash Dividend,9.8
+Withholding Tax,Data,USD,2024-05-25,MSFT(FAKE) Cash Dividend,-1.47
+Dividends,Data,USD,2024-05-13,KO(FAKE) Cash Dividend,4.71
+Withholding Tax,Data,USD,2024-05-13,KO(FAKE) Cash Dividend,-0.71
+Dividends,Data,USD,2024-05-07,PEP(FAKE) Cash Dividend,10.1
+Withholding Tax,Data,USD,2024-05-07,PEP(FAKE) Cash Dividend,-1.51
+Dividends,Data,USD,2024-05-26,XOM(FAKE) Cash Dividend,4.59
+Withholding Tax,Data,USD,2024-05-26,XOM(FAKE) Cash Dividend,-0.69
+Dividends,Data,USD,2024-05-19,V(FAKE) Cash Dividend,8.16
+Withholding Tax,Data,USD,2024-05-19,V(FAKE) Cash Dividend,-1.22
+Dividends,Data,USD,2024-05-11,MA(FAKE) Cash Dividend,6.37
+Withholding Tax,Data,USD,2024-05-11,MA(FAKE) Cash Dividend,-0.96
+Dividends,Data,EUR,2024-05-07,NESN(FAKE) Cash Dividend,7.59
+Withholding Tax,Data,EUR,2024-05-07,NESN(FAKE) Cash Dividend,-1.14
+Dividends,Data,EUR,2024-05-08,SAP(FAKE) Cash Dividend,6.57
+Withholding Tax,Data,EUR,2024-05-08,SAP(FAKE) Cash Dividend,-0.99
+Dividends,Data,GBP,2024-05-16,RIO(FAKE) Cash Dividend,7.53
+Withholding Tax,Data,GBP,2024-05-16,RIO(FAKE) Cash Dividend,-1.13
+Dividends,Data,GBP,2024-05-06,ULVR(FAKE) Cash Dividend,7.05
+Withholding Tax,Data,GBP,2024-05-06,ULVR(FAKE) Cash Dividend,-1.06

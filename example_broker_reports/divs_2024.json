@@ -1,0 +1,4389 @@
+{
+  "years": [
+    {
+      "year": "2024",
+      "fromDate": "2024-01-01",
+      "toDate": "2024-01-28",
+      "dividends": [
+        {
+          "ticker": "AAPL",
+          "currency": "USD",
+          "dividend": [
+            {
+              "date": "2024-01-05",
+              "currency": "USD",
+              "amount": 7.79,
+              "amountPln": 31.04
+            },
+            {
+              "date": "2024-02-21",
+              "currency": "USD",
+              "amount": 7.61,
+              "amountPln": 30.41
+            },
+            {
+              "date": "2024-03-15",
+              "currency": "USD",
+              "amount": 5.04,
+              "amountPln": 19.85
+            },
+            {
+              "date": "2024-04-25",
+              "currency": "USD",
+              "amount": 9.55,
+              "amountPln": 38.46
+            },
+            {
+              "date": "2024-05-22",
+              "currency": "USD",
+              "amount": 6.86,
+              "amountPln": 26.92
+            },
+            {
+              "date": "2024-06-01",
+              "currency": "USD",
+              "amount": 4.95,
+              "amountPln": 19.96
+            },
+            {
+              "date": "2024-07-28",
+              "currency": "USD",
+              "amount": 6.91,
+              "amountPln": 27.43
+            },
+            {
+              "date": "2024-08-01",
+              "currency": "USD",
+              "amount": 10.93,
+              "amountPln": 43.5
+            },
+            {
+              "date": "2024-09-15",
+              "currency": "USD",
+              "amount": 3.55,
+              "amountPln": 13.53
+            },
+            {
+              "date": "2024-10-23",
+              "currency": "USD",
+              "amount": 6.97,
+              "amountPln": 28.0
+            },
+            {
+              "date": "2024-11-30",
+              "currency": "USD",
+              "amount": 4.08,
+              "amountPln": 16.63
+            },
+            {
+              "date": "2024-12-08",
+              "currency": "USD",
+              "amount": 5.85,
+              "amountPln": 24.01
+            }
+          ]
+        },
+        {
+          "ticker": "MSFT",
+          "currency": "USD",
+          "dividend": [
+            {
+              "date": "2024-01-14",
+              "currency": "USD",
+              "amount": 4.89,
+              "amountPln": 19.63
+            },
+            {
+              "date": "2024-02-03",
+              "currency": "USD",
+              "amount": 11.19,
+              "amountPln": 44.51
+            },
+            {
+              "date": "2024-03-24",
+              "currency": "USD",
+              "amount": 4.37,
+              "amountPln": 17.43
+            },
+            {
+              "date": "2024-04-22",
+              "currency": "USD",
+              "amount": 4.14,
+              "amountPln": 16.78
+            },
+            {
+              "date": "2024-05-25",
+              "currency": "USD",
+              "amount": 9.8,
+              "amountPln": 38.59
+            },
+            {
+              "date": "2024-06-24",
+              "currency": "USD",
+              "amount": 4.96,
+              "amountPln": 20.0
+            },
+            {
+              "date": "2024-07-24",
+              "currency": "USD",
+              "amount": 9.13,
+              "amountPln": 36.06
+            },
+            {
+              "date": "2024-08-16",
+              "currency": "USD",
+              "amount": 11.34,
+              "amountPln": 44.13
+            },
+            {
+              "date": "2024-09-08",
+              "currency": "USD",
+              "amount": 11.54,
+              "amountPln": 43.99
+            },
+            {
+              "date": "2024-10-06",
+              "currency": "USD",
+              "amount": 6.93,
+              "amountPln": 27.86
+            },
+            {
+              "date": "2024-11-12",
+              "currency": "USD",
+              "amount": 10.88,
+              "amountPln": 44.62
+            },
+            {
+              "date": "2024-12-02",
+              "currency": "USD",
+              "amount": 6.84,
+              "amountPln": 27.93
+            }
+          ]
+        },
+        {
+          "ticker": "KO",
+          "currency": "USD",
+          "dividend": [
+            {
+              "date": "2024-01-25",
+              "currency": "USD",
+              "amount": 6.75,
+              "amountPln": 27.13
+            },
+            {
+              "date": "2024-02-04",
+              "currency": "USD",
+              "amount": 10.67,
+              "amountPln": 42.44
+            },
+            {
+              "date": "2024-03-08",
+              "currency": "USD",
+              "amount": 3.39,
+              "amountPln": 13.35
+            },
+            {
+              "date": "2024-04-04",
+              "currency": "USD",
+              "amount": 4.31,
+              "amountPln": 17.03
+            },
+            {
+              "date": "2024-05-13",
+              "currency": "USD",
+              "amount": 4.71,
+              "amountPln": 18.77
+            },
+            {
+              "date": "2024-06-28",
+              "currency": "USD",
+              "amount": 10.37,
+              "amountPln": 41.81
+            },
+            {
+              "date": "2024-07-04",
+              "currency": "USD",
+              "amount": 9.55,
+              "amountPln": 37.99
+            },
+            {
+              "date": "2024-08-24",
+              "currency": "USD",
+              "amount": 4.85,
+              "amountPln": 18.65
+            },
+            {
+              "date": "2024-09-21",
+              "currency": "USD",
+              "amount": 3.09,
+              "amountPln": 11.78
+            },
+            {
+              "date": "2024-10-13",
+              "currency": "USD",
+              "amount": 11.57,
+              "amountPln": 46.52
+            },
+            {
+              "date": "2024-11-26",
+              "currency": "USD",
+              "amount": 9.25,
+              "amountPln": 37.99
+            },
+            {
+              "date": "2024-12-18",
+              "currency": "USD",
+              "amount": 10.7,
+              "amountPln": 43.46
+            }
+          ]
+        },
+        {
+          "ticker": "PEP",
+          "currency": "USD",
+          "dividend": [
+            {
+              "date": "2024-01-06",
+              "currency": "USD",
+              "amount": 10.63,
+              "amountPln": 42.66
+            },
+            {
+              "date": "2024-02-20",
+              "currency": "USD",
+              "amount": 5.61,
+              "amountPln": 22.44
+            },
+            {
+              "date": "2024-03-07",
+              "currency": "USD",
+              "amount": 6.02,
+              "amountPln": 23.77
+            },
+            {
+              "date": "2024-04-13",
+              "currency": "USD",
+              "amount": 11.26,
+              "amountPln": 45.32
+            },
+            {
+              "date": "2024-05-07",
+              "currency": "USD",
+              "amount": 10.1,
+              "amountPln": 40.46
+            },
+            {
+              "date": "2024-06-12",
+              "currency": "USD",
+              "amount": 9.66,
+              "amountPln": 38.97
+            },
+            {
+              "date": "2024-07-25",
+              "currency": "USD",
+              "amount": 5.98,
+              "amountPln": 23.69
+            },
+            {
+              "date": "2024-08-24",
+              "currency": "USD",
+              "amount": 6.75,
+              "amountPln": 25.96
+            },
+            {
+              "date": "2024-09-01",
+              "currency": "USD",
+              "amount": 9.72,
+              "amountPln": 37.05
+            },
+            {
+              "date": "2024-10-03",
+              "currency": "USD",
+              "amount": 11.78,
+              "amountPln": 45.88
+            },
+            {
+              "date": "2024-11-15",
+              "currency": "USD",
+              "amount": 6.35,
+              "amountPln": 25.97
+            },
+            {
+              "date": "2024-12-08",
+              "currency": "USD",
+              "amount": 9.27,
+              "amountPln": 38.04
+            }
+          ]
+        },
+        {
+          "ticker": "XOM",
+          "currency": "USD",
+          "dividend": [
+            {
+              "date": "2024-01-08",
+              "currency": "USD",
+              "amount": 10.29,
+              "amountPln": 40.97
+            },
+            {
+              "date": "2024-02-11",
+              "currency": "USD",
+              "amount": 3.21,
+              "amountPln": 12.77
+            },
+            {
+              "date": "2024-03-17",
+              "currency": "USD",
+              "amount": 5.99,
+              "amountPln": 23.89
+            },
+            {
+              "date": "2024-04-26",
+              "currency": "USD",
+              "amount": 6.47,
+              "amountPln": 26.04
+            },
+            {
+              "date": "2024-05-26",
+              "currency": "USD",
+              "amount": 4.59,
+              "amountPln": 18.07
+            },
+            {
+              "date": "2024-06-28",
+              "currency": "USD",
+              "amount": 10.49,
+              "amountPln": 42.3
+            },
+            {
+              "date": "2024-07-20",
+              "currency": "USD",
+              "amount": 10.13,
+              "amountPln": 40.2
+            },
+            {
+              "date": "2024-08-16",
+              "currency": "USD",
+              "amount": 8.78,
+              "amountPln": 34.17
+            },
+            {
+              "date": "2024-09-02",
+              "currency": "USD",
+              "amount": 7.5,
+              "amountPln": 29.01
+            },
+            {
+              "date": "2024-10-07",
+              "currency": "USD",
+              "amount": 11.72,
+              "amountPln": 46.14
+            },
+            {
+              "date": "2024-11-05",
+              "currency": "USD",
+              "amount": 3.77,
+              "amountPln": 15.09
+            },
+            {
+              "date": "2024-12-22",
+              "currency": "USD",
+              "amount": 5.2,
+              "amountPln": 21.34
+            }
+          ]
+        },
+        {
+          "ticker": "V",
+          "currency": "USD",
+          "dividend": [
+            {
+              "date": "2024-01-14",
+              "currency": "USD",
+              "amount": 9.19,
+              "amountPln": 36.88
+            },
+            {
+              "date": "2024-02-20",
+              "currency": "USD",
+              "amount": 10.71,
+              "amountPln": 42.83
+            },
+            {
+              "date": "2024-03-24",
+              "currency": "USD",
+              "amount": 6.01,
+              "amountPln": 23.97
+            },
+            {
+              "date": "2024-04-14",
+              "currency": "USD",
+              "amount": 5.99,
+              "amountPln": 24.11
+            },
+            {
+              "date": "2024-05-19",
+              "currency": "USD",
+              "amount": 8.16,
+              "amountPln": 32.13
+            },
+            {
+              "date": "2024-06-26",
+              "currency": "USD",
+              "amount": 7.98,
+              "amountPln": 32.15
+            },
+            {
+              "date": "2024-07-27",
+              "currency": "USD",
+              "amount": 11.25,
+              "amountPln": 44.65
+            },
+            {
+              "date": "2024-08-13",
+              "currency": "USD",
+              "amount": 7.29,
+              "amountPln": 28.66
+            },
+            {
+              "date": "2024-09-25",
+              "currency": "USD",
+              "amount": 6.78,
+              "amountPln": 25.84
+            },
+            {
+              "date": "2024-10-09",
+              "currency": "USD",
+              "amount": 7.92,
+              "amountPln": 31.1
+            },
+            {
+              "date": "2024-11-19",
+              "currency": "USD",
+              "amount": 7.08,
+              "amountPln": 29.06
+            },
+            {
+              "date": "2024-12-17",
+              "currency": "USD",
+              "amount": 7.76,
+              "amountPln": 31.52
+            }
+          ]
+        },
+        {
+          "ticker": "MA",
+          "currency": "USD",
+          "dividend": [
+            {
+              "date": "2024-01-10",
+              "currency": "USD",
+              "amount": 4.79,
+              "amountPln": 19.0
+            },
+            {
+              "date": "2024-02-26",
+              "currency": "USD",
+              "amount": 5.48,
+              "amountPln": 21.8
+            },
+            {
+              "date": "2024-03-03",
+              "currency": "USD",
+              "amount": 10.91,
+              "amountPln": 43.52
+            },
+            {
+              "date": "2024-04-08",
+              "currency": "USD",
+              "amount": 7.54,
+              "amountPln": 29.82
+            },
+            {
+              "date": "2024-05-11",
+              "currency": "USD",
+              "amount": 6.37,
+              "amountPln": 25.08
+            },
+            {
+              "date": "2024-06-09",
+              "currency": "USD",
+              "amount": 7.02,
+              "amountPln": 28.3
+            },
+            {
+              "date": "2024-07-26",
+              "currency": "USD",
+              "amount": 7.11,
+              "amountPln": 28.02
+            },
+            {
+              "date": "2024-08-15",
+              "currency": "USD",
+              "amount": 11.32,
+              "amountPln": 43.53
+            },
+            {
+              "date": "2024-09-19",
+              "currency": "USD",
+              "amount": 3.25,
+              "amountPln": 12.43
+            },
+            {
+              "date": "2024-10-17",
+              "currency": "USD",
+              "amount": 11.34,
+              "amountPln": 45.12
+            },
+            {
+              "date": "2024-11-15",
+              "currency": "USD",
+              "amount": 9.39,
+              "amountPln": 38.4
+            },
+            {
+              "date": "2024-12-13",
+              "currency": "USD",
+              "amount": 9.42,
+              "amountPln": 38.38
+            }
+          ]
+        },
+        {
+          "ticker": "NESN",
+          "currency": "EUR",
+          "dividend": [
+            {
+              "date": "2024-01-23",
+              "currency": "EUR",
+              "amount": 10.26,
+              "amountPln": 44.83
+            },
+            {
+              "date": "2024-02-17",
+              "currency": "EUR",
+              "amount": 5.88,
+              "amountPln": 25.35
+            },
+            {
+              "date": "2024-03-21",
+              "currency": "EUR",
+              "amount": 9.04,
+              "amountPln": 38.9
+            },
+            {
+              "date": "2024-04-09",
+              "currency": "EUR",
+              "amount": 9.49,
+              "amountPln": 40.42
+            },
+            {
+              "date": "2024-05-07",
+              "currency": "EUR",
+              "amount": 7.59,
+              "amountPln": 32.73
+            },
+            {
+              "date": "2024-06-23",
+              "currency": "EUR",
+              "amount": 6.62,
+              "amountPln": 28.55
+            },
+            {
+              "date": "2024-07-22",
+              "currency": "EUR",
+              "amount": 7.75,
+              "amountPln": 33.17
+            },
+            {
+              "date": "2024-08-15",
+              "currency": "EUR",
+              "amount": 8.13,
+              "amountPln": 34.77
+            },
+            {
+              "date": "2024-09-18",
+              "currency": "EUR",
+              "amount": 3.15,
+              "amountPln": 13.45
+            },
+            {
+              "date": "2024-10-07",
+              "currency": "EUR",
+              "amount": 7.14,
+              "amountPln": 30.83
+            },
+            {
+              "date": "2024-11-01",
+              "currency": "EUR",
+              "amount": 5.99,
+              "amountPln": 25.78
+            },
+            {
+              "date": "2024-12-16",
+              "currency": "EUR",
+              "amount": 11.98,
+              "amountPln": 51.06
+            }
+          ]
+        },
+        {
+          "ticker": "SAP",
+          "currency": "EUR",
+          "dividend": [
+            {
+              "date": "2024-01-01",
+              "currency": "EUR",
+              "amount": 11.9,
+              "amountPln": 51.69
+            },
+            {
+              "date": "2024-02-18",
+              "currency": "EUR",
+              "amount": 9.06,
+              "amountPln": 39.06
+            },
+            {
+              "date": "2024-03-20",
+              "currency": "EUR",
+              "amount": 10.45,
+              "amountPln": 45.19
+            },
+            {
+              "date": "2024-04-14",
+              "currency": "EUR",
+              "amount": 10.26,
+              "amountPln": 44.35
+            },
+            {
+              "date": "2024-05-08",
+              "currency": "EUR",
+              "amount": 6.57,
+              "amountPln": 28.38
+            },
+            {
+              "date": "2024-06-06",
+              "currency": "EUR",
+              "amount": 6.32,
+              "amountPln": 27.17
+            },
+            {
+              "date": "2024-07-02",
+              "currency": "EUR",
+              "amount": 3.87,
+              "amountPln": 16.75
+            },
+            {
+              "date": "2024-08-18",
+              "currency": "EUR",
+              "amount": 9.7,
+              "amountPln": 41.49
+            },
+            {
+              "date": "2024-09-06",
+              "currency": "EUR",
+              "amount": 6.86,
+              "amountPln": 29.35
+            },
+            {
+              "date": "2024-10-26",
+              "currency": "EUR",
+              "amount": 8.84,
+              "amountPln": 38.43
+            },
+            {
+              "date": "2024-11-23",
+              "currency": "EUR",
+              "amount": 3.0,
+              "amountPln": 12.91
+            },
+            {
+              "date": "2024-12-13",
+              "currency": "EUR",
+              "amount": 6.02,
+              "amountPln": 25.72
+            }
+          ]
+        },
+        {
+          "ticker": "RIO",
+          "currency": "GBP",
+          "dividend": [
+            {
+              "date": "2024-01-09",
+              "currency": "GBP",
+              "amount": 9.33,
+              "amountPln": 47.07
+            },
+            {
+              "date": "2024-02-24",
+              "currency": "GBP",
+              "amount": 3.65,
+              "amountPln": 18.41
+            },
+            {
+              "date": "2024-03-23",
+              "currency": "GBP",
+              "amount": 6.86,
+              "amountPln": 34.51
+            },
+            {
+              "date": "2024-04-21",
+              "currency": "GBP",
+              "amount": 4.96,
+              "amountPln": 25.01
+            },
+            {
+              "date": "2024-05-16",
+              "currency": "GBP",
+              "amount": 7.53,
+              "amountPln": 37.41
+            },
+            {
+              "date": "2024-06-28",
+              "currency": "GBP",
+              "amount": 7.81,
+              "amountPln": 39.79
+            },
+            {
+              "date": "2024-07-16",
+              "currency": "GBP",
+              "amount": 7.61,
+              "amountPln": 38.56
+            },
+            {
+              "date": "2024-08-05",
+              "currency": "GBP",
+              "amount": 4.02,
+              "amountPln": 20.18
+            },
+            {
+              "date": "2024-09-16",
+              "currency": "GBP",
+              "amount": 3.92,
+              "amountPln": 19.87
+            },
+            {
+              "date": "2024-10-10",
+              "currency": "GBP",
+              "amount": 8.44,
+              "amountPln": 43.43
+            },
+            {
+              "date": "2024-11-21",
+              "currency": "GBP",
+              "amount": 7.26,
+              "amountPln": 37.91
+            },
+            {
+              "date": "2024-12-27",
+              "currency": "GBP",
+              "amount": 4.22,
+              "amountPln": 21.66
+            }
+          ]
+        },
+        {
+          "ticker": "ULVR",
+          "currency": "GBP",
+          "dividend": [
+            {
+              "date": "2024-01-31",
+              "currency": "GBP",
+              "amount": 4.68,
+              "amountPln": 23.8
+            },
+            {
+              "date": "2024-02-08",
+              "currency": "GBP",
+              "amount": 7.96,
+              "amountPln": 40.51
+            },
+            {
+              "date": "2024-03-31",
+              "currency": "GBP",
+              "amount": 3.36,
+              "amountPln": 16.9
+            },
+            {
+              "date": "2024-04-14",
+              "currency": "GBP",
+              "amount": 7.85,
+              "amountPln": 39.57
+            },
+            {
+              "date": "2024-05-06",
+              "currency": "GBP",
+              "amount": 7.05,
+              "amountPln": 35.66
+            },
+            {
+              "date": "2024-06-10",
+              "currency": "GBP",
+              "amount": 4.82,
+              "amountPln": 24.6
+            },
+            {
+              "date": "2024-07-31",
+              "currency": "GBP",
+              "amount": 11.82,
+              "amountPln": 60.19
+            },
+            {
+              "date": "2024-08-08",
+              "currency": "GBP",
+              "amount": 3.56,
+              "amountPln": 17.87
+            },
+            {
+              "date": "2024-09-08",
+              "currency": "GBP",
+              "amount": 7.68,
+              "amountPln": 39.17
+            },
+            {
+              "date": "2024-10-28",
+              "currency": "GBP",
+              "amount": 10.82,
+              "amountPln": 56.44
+            },
+            {
+              "date": "2024-11-16",
+              "currency": "GBP",
+              "amount": 3.08,
+              "amountPln": 15.94
+            },
+            {
+              "date": "2024-12-28",
+              "currency": "GBP",
+              "amount": 3.15,
+              "amountPln": 16.17
+            }
+          ]
+        }
+      ],
+      "taxes": [
+        {
+          "ticker": "AAPL",
+          "currency": "USD",
+          "tax": [
+            {
+              "date": "2024-01-05",
+              "currency": "USD",
+              "amount": -1.17,
+              "amountPln": -4.66
+            },
+            {
+              "date": "2024-02-21",
+              "currency": "USD",
+              "amount": -1.14,
+              "amountPln": -4.56
+            },
+            {
+              "date": "2024-03-15",
+              "currency": "USD",
+              "amount": -0.76,
+              "amountPln": -2.99
+            },
+            {
+              "date": "2024-04-25",
+              "currency": "USD",
+              "amount": -1.43,
+              "amountPln": -5.76
+            },
+            {
+              "date": "2024-05-22",
+              "currency": "USD",
+              "amount": -1.03,
+              "amountPln": -4.04
+            },
+            {
+              "date": "2024-06-01",
+              "currency": "USD",
+              "amount": -0.74,
+              "amountPln": -2.98
+            },
+            {
+              "date": "2024-07-28",
+              "currency": "USD",
+              "amount": -1.04,
+              "amountPln": -4.13
+            },
+            {
+              "date": "2024-08-01",
+              "currency": "USD",
+              "amount": -1.64,
+              "amountPln": -6.53
+            },
+            {
+              "date": "2024-09-15",
+              "currency": "USD",
+              "amount": -0.53,
+              "amountPln": -2.02
+            },
+            {
+              "date": "2024-10-23",
+              "currency": "USD",
+              "amount": -1.05,
+              "amountPln": -4.22
+            },
+            {
+              "date": "2024-11-30",
+              "currency": "USD",
+              "amount": -0.61,
+              "amountPln": -2.49
+            },
+            {
+              "date": "2024-12-08",
+              "currency": "USD",
+              "amount": -0.88,
+              "amountPln": -3.61
+            }
+          ]
+        },
+        {
+          "ticker": "MSFT",
+          "currency": "USD",
+          "tax": [
+            {
+              "date": "2024-01-14",
+              "currency": "USD",
+              "amount": -0.73,
+              "amountPln": -2.93
+            },
+            {
+              "date": "2024-02-03",
+              "currency": "USD",
+              "amount": -1.68,
+              "amountPln": -6.68
+            },
+            {
+              "date": "2024-03-24",
+              "currency": "USD",
+              "amount": -0.66,
+              "amountPln": -2.63
+            },
+            {
+              "date": "2024-04-22",
+              "currency": "USD",
+              "amount": -0.62,
+              "amountPln": -2.51
+            },
+            {
+              "date": "2024-05-25",
+              "currency": "USD",
+              "amount": -1.47,
+              "amountPln": -5.79
+            },
+            {
+              "date": "2024-06-24",
+              "currency": "USD",
+              "amount": -0.74,
+              "amountPln": -2.98
+            },
+            {
+              "date": "2024-07-24",
+              "currency": "USD",
+              "amount": -1.37,
+              "amountPln": -5.41
+            },
+            {
+              "date": "2024-08-16",
+              "currency": "USD",
+              "amount": -1.7,
+              "amountPln": -6.62
+            },
+            {
+              "date": "2024-09-08",
+              "currency": "USD",
+              "amount": -1.73,
+              "amountPln": -6.59
+            },
+            {
+              "date": "2024-10-06",
+              "currency": "USD",
+              "amount": -1.04,
+              "amountPln": -4.18
+            },
+            {
+              "date": "2024-11-12",
+              "currency": "USD",
+              "amount": -1.63,
+              "amountPln": -6.68
+            },
+            {
+              "date": "2024-12-02",
+              "currency": "USD",
+              "amount": -1.03,
+              "amountPln": -4.21
+            }
+          ]
+        },
+        {
+          "ticker": "KO",
+          "currency": "USD",
+          "tax": [
+            {
+              "date": "2024-01-25",
+              "currency": "USD",
+              "amount": -1.01,
+              "amountPln": -4.06
+            },
+            {
+              "date": "2024-02-04",
+              "currency": "USD",
+              "amount": -1.6,
+              "amountPln": -6.36
+            },
+            {
+              "date": "2024-03-08",
+              "currency": "USD",
+              "amount": -0.51,
+              "amountPln": -2.01
+            },
+            {
+              "date": "2024-04-04",
+              "currency": "USD",
+              "amount": -0.65,
+              "amountPln": -2.57
+            },
+            {
+              "date": "2024-05-13",
+              "currency": "USD",
+              "amount": -0.71,
+              "amountPln": -2.83
+            },
+            {
+              "date": "2024-06-28",
+              "currency": "USD",
+              "amount": -1.56,
+              "amountPln": -6.29
+            },
+            {
+              "date": "2024-07-04",
+              "currency": "USD",
+              "amount": -1.43,
+              "amountPln": -5.69
+            },
+            {
+              "date": "2024-08-24",
+              "currency": "USD",
+              "amount": -0.73,
+              "amountPln": -2.81
+            },
+            {
+              "date": "2024-09-21",
+              "currency": "USD",
+              "amount": -0.46,
+              "amountPln": -1.75
+            },
+            {
+              "date": "2024-10-13",
+              "currency": "USD",
+              "amount": -1.74,
+              "amountPln": -7.0
+            },
+            {
+              "date": "2024-11-26",
+              "currency": "USD",
+              "amount": -1.39,
+              "amountPln": -5.71
+            },
+            {
+              "date": "2024-12-18",
+              "currency": "USD",
+              "amount": -1.6,
+              "amountPln": -6.5
+            }
+          ]
+        },
+        {
+          "ticker": "PEP",
+          "currency": "USD",
+          "tax": [
+            {
+              "date": "2024-01-06",
+              "currency": "USD",
+              "amount": -1.59,
+              "amountPln": -6.38
+            },
+            {
+              "date": "2024-02-20",
+              "currency": "USD",
+              "amount": -0.84,
+              "amountPln": -3.36
+            },
+            {
+              "date": "2024-03-07",
+              "currency": "USD",
+              "amount": -0.9,
+              "amountPln": -3.55
+            },
+            {
+              "date": "2024-04-13",
+              "currency": "USD",
+              "amount": -1.69,
+              "amountPln": -6.8
+            },
+            {
+              "date": "2024-05-07",
+              "currency": "USD",
+              "amount": -1.51,
+              "amountPln": -6.05
+            },
+            {
+              "date": "2024-06-12",
+              "currency": "USD",
+              "amount": -1.45,
+              "amountPln": -5.85
+            },
+            {
+              "date": "2024-07-25",
+              "currency": "USD",
+              "amount": -0.9,
+              "amountPln": -3.57
+            },
+            {
+              "date": "2024-08-24",
+              "currency": "USD",
+              "amount": -1.01,
+              "amountPln": -3.88
+            },
+            {
+              "date": "2024-09-01",
+              "currency": "USD",
+              "amount": -1.46,
+              "amountPln": -5.57
+            },
+            {
+              "date": "2024-10-03",
+              "currency": "USD",
+              "amount": -1.77,
+              "amountPln": -6.89
+            },
+            {
+              "date": "2024-11-15",
+              "currency": "USD",
+              "amount": -0.95,
+              "amountPln": -3.89
+            },
+            {
+              "date": "2024-12-08",
+              "currency": "USD",
+              "amount": -1.39,
+              "amountPln": -5.7
+            }
+          ]
+        },
+        {
+          "ticker": "XOM",
+          "currency": "USD",
+          "tax": [
+            {
+              "date": "2024-01-08",
+              "currency": "USD",
+              "amount": -1.54,
+              "amountPln": -6.13
+            },
+            {
+              "date": "2024-02-11",
+              "currency": "USD",
+              "amount": -0.48,
+              "amountPln": -1.91
+            },
+            {
+              "date": "2024-03-17",
+              "currency": "USD",
+              "amount": -0.9,
+              "amountPln": -3.59
+            },
+            {
+              "date": "2024-04-26",
+              "currency": "USD",
+              "amount": -0.97,
+              "amountPln": -3.9
+            },
+            {
+              "date": "2024-05-26",
+              "currency": "USD",
+              "amount": -0.69,
+              "amountPln": -2.72
+            },
+            {
+              "date": "2024-06-28",
+              "currency": "USD",
+              "amount": -1.57,
+              "amountPln": -6.33
+            },
+            {
+              "date": "2024-07-20",
+              "currency": "USD",
+              "amount": -1.52,
+              "amountPln": -6.03
+            },
+            {
+              "date": "2024-08-16",
+              "currency": "USD",
+              "amount": -1.32,
+              "amountPln": -5.14
+            },
+            {
+              "date": "2024-09-02",
+              "currency": "USD",
+              "amount": -1.12,
+              "amountPln": -4.33
+            },
+            {
+              "date": "2024-10-07",
+              "currency": "USD",
+              "amount": -1.76,
+              "amountPln": -6.93
+            },
+            {
+              "date": "2024-11-05",
+              "currency": "USD",
+              "amount": -0.57,
+              "amountPln": -2.28
+            },
+            {
+              "date": "2024-12-22",
+              "currency": "USD",
+              "amount": -0.78,
+              "amountPln": -3.2
+            }
+          ]
+        },
+        {
+          "ticker": "V",
+          "currency": "USD",
+          "tax": [
+            {
+              "date": "2024-01-14",
+              "currency": "USD",
+              "amount": -1.38,
+              "amountPln": -5.54
+            },
+            {
+              "date": "2024-02-20",
+              "currency": "USD",
+              "amount": -1.61,
+              "amountPln": -6.44
+            },
+            {
+              "date": "2024-03-24",
+              "currency": "USD",
+              "amount": -0.9,
+              "amountPln": -3.59
+            },
+            {
+              "date": "2024-04-14",
+              "currency": "USD",
+              "amount": -0.9,
+              "amountPln": -3.62
+            },
+            {
+              "date": "2024-05-19",
+              "currency": "USD",
+              "amount": -1.22,
+              "amountPln": -4.8
+            },
+            {
+              "date": "2024-06-26",
+              "currency": "USD",
+              "amount": -1.2,
+              "amountPln": -4.83
+            },
+            {
+              "date": "2024-07-27",
+              "currency": "USD",
+              "amount": -1.69,
+              "amountPln": -6.71
+            },
+            {
+              "date": "2024-08-13",
+              "currency": "USD",
+              "amount": -1.09,
+              "amountPln": -4.29
+            },
+            {
+              "date": "2024-09-25",
+              "currency": "USD",
+              "amount": -1.02,
+              "amountPln": -3.89
+            },
+            {
+              "date": "2024-10-09",
+              "currency": "USD",
+              "amount": -1.19,
+              "amountPln": -4.67
+            },
+            {
+              "date": "2024-11-19",
+              "currency": "USD",
+              "amount": -1.06,
+              "amountPln": -4.35
+            },
+            {
+              "date": "2024-12-17",
+              "currency": "USD",
+              "amount": -1.16,
+              "amountPln": -4.71
+            }
+          ]
+        },
+        {
+          "ticker": "MA",
+          "currency": "USD",
+          "tax": [
+            {
+              "date": "2024-01-10",
+              "currency": "USD",
+              "amount": -0.72,
+              "amountPln": -2.86
+            },
+            {
+              "date": "2024-02-26",
+              "currency": "USD",
+              "amount": -0.82,
+              "amountPln": -3.26
+            },
+            {
+              "date": "2024-03-03",
+              "currency": "USD",
+              "amount": -1.64,
+              "amountPln": -6.54
+            },
+            {
+              "date": "2024-04-08",
+              "currency": "USD",
+              "amount": -1.13,
+              "amountPln": -4.47
+            },
+            {
+              "date": "2024-05-11",
+              "currency": "USD",
+              "amount": -0.96,
+              "amountPln": -3.78
+            },
+            {
+              "date": "2024-06-09",
+              "currency": "USD",
+              "amount": -1.05,
+              "amountPln": -4.23
+            },
+            {
+              "date": "2024-07-26",
+              "currency": "USD",
+              "amount": -1.07,
+              "amountPln": -4.22
+            },
+            {
+              "date": "2024-08-15",
+              "currency": "USD",
+              "amount": -1.7,
+              "amountPln": -6.54
+            },
+            {
+              "date": "2024-09-19",
+              "currency": "USD",
+              "amount": -0.49,
+              "amountPln": -1.87
+            },
+            {
+              "date": "2024-10-17",
+              "currency": "USD",
+              "amount": -1.7,
+              "amountPln": -6.76
+            },
+            {
+              "date": "2024-11-15",
+              "currency": "USD",
+              "amount": -1.41,
+              "amountPln": -5.77
+            },
+            {
+              "date": "2024-12-13",
+              "currency": "USD",
+              "amount": -1.41,
+              "amountPln": -5.74
+            }
+          ]
+        },
+        {
+          "ticker": "NESN",
+          "currency": "EUR",
+          "tax": [
+            {
+              "date": "2024-01-23",
+              "currency": "EUR",
+              "amount": -1.54,
+              "amountPln": -6.73
+            },
+            {
+              "date": "2024-02-17",
+              "currency": "EUR",
+              "amount": -0.88,
+              "amountPln": -3.79
+            },
+            {
+              "date": "2024-03-21",
+              "currency": "EUR",
+              "amount": -1.36,
+              "amountPln": -5.85
+            },
+            {
+              "date": "2024-04-09",
+              "currency": "EUR",
+              "amount": -1.42,
+              "amountPln": -6.05
+            },
+            {
+              "date": "2024-05-07",
+              "currency": "EUR",
+              "amount": -1.14,
+              "amountPln": -4.92
+            },
+            {
+              "date": "2024-06-23",
+              "currency": "EUR",
+              "amount": -0.99,
+              "amountPln": -4.27
+            },
+            {
+              "date": "2024-07-22",
+              "currency": "EUR",
+              "amount": -1.16,
+              "amountPln": -4.96
+            },
+            {
+              "date": "2024-08-15",
+              "currency": "EUR",
+              "amount": -1.22,
+              "amountPln": -5.22
+            },
+            {
+              "date": "2024-09-18",
+              "currency": "EUR",
+              "amount": -0.47,
+              "amountPln": -2.01
+            },
+            {
+              "date": "2024-10-07",
+              "currency": "EUR",
+              "amount": -1.07,
+              "amountPln": -4.62
+            },
+            {
+              "date": "2024-11-01",
+              "currency": "EUR",
+              "amount": -0.9,
+              "amountPln": -3.87
+            },
+            {
+              "date": "2024-12-16",
+              "currency": "EUR",
+              "amount": -1.8,
+              "amountPln": -7.67
+            }
+          ]
+        },
+        {
+          "ticker": "SAP",
+          "currency": "EUR",
+          "tax": [
+            {
+              "date": "2024-01-01",
+              "currency": "EUR",
+              "amount": -1.78,
+              "amountPln": -7.73
+            },
+            {
+              "date": "2024-02-18",
+              "currency": "EUR",
+              "amount": -1.36,
+              "amountPln": -5.86
+            },
+            {
+              "date": "2024-03-20",
+              "currency": "EUR",
+              "amount": -1.57,
+              "amountPln": -6.79
+            },
+            {
+              "date": "2024-04-14",
+              "currency": "EUR",
+              "amount": -1.54,
+              "amountPln": -6.66
+            },
+            {
+              "date": "2024-05-08",
+              "currency": "EUR",
+              "amount": -0.99,
+              "amountPln": -4.28
+            },
+            {
+              "date": "2024-06-06",
+              "currency": "EUR",
+              "amount": -0.95,
+              "amountPln": -4.08
+            },
+            {
+              "date": "2024-07-02",
+              "currency": "EUR",
+              "amount": -0.58,
+              "amountPln": -2.51
+            },
+            {
+              "date": "2024-08-18",
+              "currency": "EUR",
+              "amount": -1.45,
+              "amountPln": -6.2
+            },
+            {
+              "date": "2024-09-06",
+              "currency": "EUR",
+              "amount": -1.03,
+              "amountPln": -4.41
+            },
+            {
+              "date": "2024-10-26",
+              "currency": "EUR",
+              "amount": -1.33,
+              "amountPln": -5.78
+            },
+            {
+              "date": "2024-11-23",
+              "currency": "EUR",
+              "amount": -0.45,
+              "amountPln": -1.94
+            },
+            {
+              "date": "2024-12-13",
+              "currency": "EUR",
+              "amount": -0.9,
+              "amountPln": -3.84
+            }
+          ]
+        },
+        {
+          "ticker": "RIO",
+          "currency": "GBP",
+          "tax": [
+            {
+              "date": "2024-01-09",
+              "currency": "GBP",
+              "amount": -1.4,
+              "amountPln": -7.06
+            },
+            {
+              "date": "2024-02-24",
+              "currency": "GBP",
+              "amount": -0.55,
+              "amountPln": -2.77
+            },
+            {
+              "date": "2024-03-23",
+              "currency": "GBP",
+              "amount": -1.03,
+              "amountPln": -5.18
+            },
+            {
+              "date": "2024-04-21",
+              "currency": "GBP",
+              "amount": -0.74,
+              "amountPln": -3.73
+            },
+            {
+              "date": "2024-05-16",
+              "currency": "GBP",
+              "amount": -1.13,
+              "amountPln": -5.61
+            },
+            {
+              "date": "2024-06-28",
+              "currency": "GBP",
+              "amount": -1.17,
+              "amountPln": -5.96
+            },
+            {
+              "date": "2024-07-16",
+              "currency": "GBP",
+              "amount": -1.14,
+              "amountPln": -5.78
+            },
+            {
+              "date": "2024-08-05",
+              "currency": "GBP",
+              "amount": -0.6,
+              "amountPln": -3.01
+            },
+            {
+              "date": "2024-09-16",
+              "currency": "GBP",
+              "amount": -0.59,
+              "amountPln": -2.99
+            },
+            {
+              "date": "2024-10-10",
+              "currency": "GBP",
+              "amount": -1.27,
+              "amountPln": -6.53
+            },
+            {
+              "date": "2024-11-21",
+              "currency": "GBP",
+              "amount": -1.09,
+              "amountPln": -5.69
+            },
+            {
+              "date": "2024-12-27",
+              "currency": "GBP",
+              "amount": -0.63,
+              "amountPln": -3.23
+            }
+          ]
+        },
+        {
+          "ticker": "ULVR",
+          "currency": "GBP",
+          "tax": [
+            {
+              "date": "2024-01-31",
+              "currency": "GBP",
+              "amount": -0.7,
+              "amountPln": -3.56
+            },
+            {
+              "date": "2024-02-08",
+              "currency": "GBP",
+              "amount": -1.19,
+              "amountPln": -6.06
+            },
+            {
+              "date": "2024-03-31",
+              "currency": "GBP",
+              "amount": -0.5,
+              "amountPln": -2.52
+            },
+            {
+              "date": "2024-04-14",
+              "currency": "GBP",
+              "amount": -1.18,
+              "amountPln": -5.95
+            },
+            {
+              "date": "2024-05-06",
+              "currency": "GBP",
+              "amount": -1.06,
+              "amountPln": -5.36
+            },
+            {
+              "date": "2024-06-10",
+              "currency": "GBP",
+              "amount": -0.72,
+              "amountPln": -3.67
+            },
+            {
+              "date": "2024-07-31",
+              "currency": "GBP",
+              "amount": -1.77,
+              "amountPln": -9.01
+            },
+            {
+              "date": "2024-08-08",
+              "currency": "GBP",
+              "amount": -0.53,
+              "amountPln": -2.66
+            },
+            {
+              "date": "2024-09-08",
+              "currency": "GBP",
+              "amount": -1.15,
+              "amountPln": -5.87
+            },
+            {
+              "date": "2024-10-28",
+              "currency": "GBP",
+              "amount": -1.62,
+              "amountPln": -8.45
+            },
+            {
+              "date": "2024-11-16",
+              "currency": "GBP",
+              "amount": -0.46,
+              "amountPln": -2.38
+            },
+            {
+              "date": "2024-12-28",
+              "currency": "GBP",
+              "amount": -0.47,
+              "amountPln": -2.41
+            }
+          ]
+        }
+      ],
+      "fx": {
+        "EUR": [
+          {
+            "date": "2024-01-02",
+            "rate": 4.3434
+          },
+          {
+            "date": "2024-01-03",
+            "rate": 4.3646
+          },
+          {
+            "date": "2024-01-04",
+            "rate": 4.3525
+          },
+          {
+            "date": "2024-01-05",
+            "rate": 4.3484
+          },
+          {
+            "date": "2024-01-08",
+            "rate": 4.3548
+          },
+          {
+            "date": "2024-01-09",
+            "rate": 4.3351
+          },
+          {
+            "date": "2024-01-10",
+            "rate": 4.3413
+          },
+          {
+            "date": "2024-01-11",
+            "rate": 4.3505
+          },
+          {
+            "date": "2024-01-12",
+            "rate": 4.3574
+          },
+          {
+            "date": "2024-01-15",
+            "rate": 4.3748
+          },
+          {
+            "date": "2024-01-16",
+            "rate": 4.3934
+          },
+          {
+            "date": "2024-01-17",
+            "rate": 4.3978
+          },
+          {
+            "date": "2024-01-18",
+            "rate": 4.4016
+          },
+          {
+            "date": "2024-01-19",
+            "rate": 4.3846
+          },
+          {
+            "date": "2024-01-22",
+            "rate": 4.356
+          },
+          {
+            "date": "2024-01-23",
+            "rate": 4.3697
+          },
+          {
+            "date": "2024-01-24",
+            "rate": 4.3755
+          },
+          {
+            "date": "2024-01-25",
+            "rate": 4.379
+          },
+          {
+            "date": "2024-01-26",
+            "rate": 4.3802
+          },
+          {
+            "date": "2024-01-29",
+            "rate": 4.3653
+          },
+          {
+            "date": "2024-01-30",
+            "rate": 4.3634
+          },
+          {
+            "date": "2024-01-31",
+            "rate": 4.3434
+          },
+          {
+            "date": "2024-02-05",
+            "rate": 4.3278
+          },
+          {
+            "date": "2024-02-06",
+            "rate": 4.3435
+          },
+          {
+            "date": "2024-02-07",
+            "rate": 4.3466
+          },
+          {
+            "date": "2024-02-08",
+            "rate": 4.3449
+          },
+          {
+            "date": "2024-02-09",
+            "rate": 4.3167
+          },
+          {
+            "date": "2024-02-12",
+            "rate": 4.328
+          },
+          {
+            "date": "2024-02-13",
+            "rate": 4.3214
+          },
+          {
+            "date": "2024-02-14",
+            "rate": 4.3435
+          },
+          {
+            "date": "2024-02-15",
+            "rate": 4.3463
+          },
+          {
+            "date": "2024-02-16",
+            "rate": 4.3414
+          },
+          {
+            "date": "2024-02-19",
+            "rate": 4.339
+          },
+          {
+            "date": "2024-02-20",
+            "rate": 4.3186
+          },
+          {
+            "date": "2024-02-21",
+            "rate": 4.3163
+          },
+          {
+            "date": "2024-02-22",
+            "rate": 4.3199
+          },
+          {
+            "date": "2024-02-23",
+            "rate": 4.3326
+          },
+          {
+            "date": "2024-02-26",
+            "rate": 4.3117
+          },
+          {
+            "date": "2024-03-04",
+            "rate": 4.3201
+          },
+          {
+            "date": "2024-03-05",
+            "rate": 4.3228
+          },
+          {
+            "date": "2024-03-06",
+            "rate": 4.3106
+          },
+          {
+            "date": "2024-03-07",
+            "rate": 4.3045
+          },
+          {
+            "date": "2024-03-08",
+            "rate": 4.3079
+          },
+          {
+            "date": "2024-03-11",
+            "rate": 4.2933
+          },
+          {
+            "date": "2024-03-12",
+            "rate": 4.2804
+          },
+          {
+            "date": "2024-03-13",
+            "rate": 4.2896
+          },
+          {
+            "date": "2024-03-14",
+            "rate": 4.287
+          },
+          {
+            "date": "2024-03-15",
+            "rate": 4.2929
+          },
+          {
+            "date": "2024-03-18",
+            "rate": 4.3086
+          },
+          {
+            "date": "2024-03-19",
+            "rate": 4.3201
+          },
+          {
+            "date": "2024-03-20",
+            "rate": 4.3242
+          },
+          {
+            "date": "2024-03-21",
+            "rate": 4.3031
+          },
+          {
+            "date": "2024-03-22",
+            "rate": 4.3186
+          },
+          {
+            "date": "2024-03-25",
+            "rate": 4.3091
+          },
+          {
+            "date": "2024-03-26",
+            "rate": 4.3093
+          },
+          {
+            "date": "2024-03-27",
+            "rate": 4.3153
+          },
+          {
+            "date": "2024-03-28",
+            "rate": 4.3191
+          },
+          {
+            "date": "2024-03-29",
+            "rate": 4.3009
+          },
+          {
+            "date": "2024-04-04",
+            "rate": 4.2921
+          },
+          {
+            "date": "2024-04-05",
+            "rate": 4.2883
+          },
+          {
+            "date": "2024-04-08",
+            "rate": 4.2805
+          },
+          {
+            "date": "2024-04-09",
+            "rate": 4.2588
+          },
+          {
+            "date": "2024-04-10",
+            "rate": 4.2641
+          },
+          {
+            "date": "2024-04-11",
+            "rate": 4.2649
+          },
+          {
+            "date": "2024-04-12",
+            "rate": 4.2666
+          },
+          {
+            "date": "2024-04-15",
+            "rate": 4.2851
+          },
+          {
+            "date": "2024-04-16",
+            "rate": 4.3197
+          },
+          {
+            "date": "2024-04-17",
+            "rate": 4.3353
+          },
+          {
+            "date": "2024-04-18",
+            "rate": 4.3309
+          },
+          {
+            "date": "2024-04-19",
+            "rate": 4.3316
+          },
+          {
+            "date": "2024-04-22",
+            "rate": 4.3203
+          },
+          {
+            "date": "2024-04-23",
+            "rate": 4.3335
+          },
+          {
+            "date": "2024-04-24",
+            "rate": 4.3177
+          },
+          {
+            "date": "2024-04-25",
+            "rate": 4.3198
+          },
+          {
+            "date": "2024-04-26",
+            "rate": 4.3225
+          },
+          {
+            "date": "2024-05-06",
+            "rate": 4.3294
+          },
+          {
+            "date": "2024-05-07",
+            "rate": 4.3116
+          },
+          {
+            "date": "2024-05-08",
+            "rate": 4.3195
+          },
+          {
+            "date": "2024-05-09",
+            "rate": 4.2993
+          },
+          {
+            "date": "2024-05-10",
+            "rate": 4.2979
+          },
+          {
+            "date": "2024-05-13",
+            "rate": 4.2977
+          },
+          {
+            "date": "2024-05-14",
+            "rate": 4.2812
+          },
+          {
+            "date": "2024-05-15",
+            "rate": 4.2635
+          },
+          {
+            "date": "2024-05-16",
+            "rate": 4.2617
+          },
+          {
+            "date": "2024-05-17",
+            "rate": 4.2685
+          },
+          {
+            "date": "2024-05-20",
+            "rate": 4.2575
+          },
+          {
+            "date": "2024-05-21",
+            "rate": 4.2572
+          },
+          {
+            "date": "2024-05-22",
+            "rate": 4.2575
+          },
+          {
+            "date": "2024-05-23",
+            "rate": 4.2699
+          },
+          {
+            "date": "2024-05-24",
+            "rate": 4.2624
+          },
+          {
+            "date": "2024-06-03",
+            "rate": 4.2817
+          },
+          {
+            "date": "2024-06-04",
+            "rate": 4.2923
+          },
+          {
+            "date": "2024-06-05",
+            "rate": 4.3081
+          },
+          {
+            "date": "2024-06-06",
+            "rate": 4.2997
+          },
+          {
+            "date": "2024-06-07",
+            "rate": 4.2891
+          },
+          {
+            "date": "2024-06-10",
+            "rate": 4.3197
+          },
+          {
+            "date": "2024-06-11",
+            "rate": 4.3456
+          },
+          {
+            "date": "2024-06-12",
+            "rate": 4.3354
+          },
+          {
+            "date": "2024-06-13",
+            "rate": 4.3355
+          },
+          {
+            "date": "2024-06-14",
+            "rate": 4.3581
+          },
+          {
+            "date": "2024-06-17",
+            "rate": 4.3608
+          },
+          {
+            "date": "2024-06-18",
+            "rate": 4.3468
+          },
+          {
+            "date": "2024-06-19",
+            "rate": 4.3376
+          },
+          {
+            "date": "2024-06-20",
+            "rate": 4.3238
+          },
+          {
+            "date": "2024-06-21",
+            "rate": 4.3331
+          },
+          {
+            "date": "2024-06-24",
+            "rate": 4.3198
+          },
+          {
+            "date": "2024-06-25",
+            "rate": 4.2909
+          },
+          {
+            "date": "2024-06-26",
+            "rate": 4.3087
+          },
+          {
+            "date": "2024-06-27",
+            "rate": 4.3085
+          },
+          {
+            "date": "2024-06-28",
+            "rate": 4.313
+          },
+          {
+            "date": "2024-07-02",
+            "rate": 4.3286
+          },
+          {
+            "date": "2024-07-03",
+            "rate": 4.3021
+          },
+          {
+            "date": "2024-07-04",
+            "rate": 4.2975
+          },
+          {
+            "date": "2024-07-05",
+            "rate": 4.2858
+          },
+          {
+            "date": "2024-07-08",
+            "rate": 4.278
+          },
+          {
+            "date": "2024-07-09",
+            "rate": 4.2633
+          },
+          {
+            "date": "2024-07-10",
+            "rate": 4.2529
+          },
+          {
+            "date": "2024-07-11",
+            "rate": 4.2586
+          },
+          {
+            "date": "2024-07-12",
+            "rate": 4.2567
+          },
+          {
+            "date": "2024-07-15",
+            "rate": 4.2499
+          },
+          {
+            "date": "2024-07-16",
+            "rate": 4.2604
+          },
+          {
+            "date": "2024-07-17",
+            "rate": 4.2904
+          },
+          {
+            "date": "2024-07-18",
+            "rate": 4.2954
+          },
+          {
+            "date": "2024-07-19",
+            "rate": 4.293
+          },
+          {
+            "date": "2024-07-22",
+            "rate": 4.2797
+          },
+          {
+            "date": "2024-07-23",
+            "rate": 4.281
+          },
+          {
+            "date": "2024-07-24",
+            "rate": 4.2796
+          },
+          {
+            "date": "2024-07-25",
+            "rate": 4.2971
+          },
+          {
+            "date": "2024-07-26",
+            "rate": 4.2773
+          },
+          {
+            "date": "2024-07-29",
+            "rate": 4.2847
+          },
+          {
+            "date": "2024-07-30",
+            "rate": 4.2845
+          },
+          {
+            "date": "2024-07-31",
+            "rate": 4.2953
+          },
+          {
+            "date": "2024-08-01",
+            "rate": 4.2924
+          },
+          {
+            "date": "2024-08-02",
+            "rate": 4.2903
+          },
+          {
+            "date": "2024-08-05",
+            "rate": 4.3073
+          },
+          {
+            "date": "2024-08-06",
+            "rate": 4.313
+          },
+          {
+            "date": "2024-08-07",
+            "rate": 4.3158
+          },
+          {
+            "date": "2024-08-08",
+            "rate": 4.3225
+          },
+          {
+            "date": "2024-08-09",
+            "rate": 4.3238
+          },
+          {
+            "date": "2024-08-12",
+            "rate": 4.3123
+          },
+          {
+            "date": "2024-08-13",
+            "rate": 4.2945
+          },
+          {
+            "date": "2024-08-14",
+            "rate": 4.2933
+          },
+          {
+            "date": "2024-08-16",
+            "rate": 4.2732
+          },
+          {
+            "date": "2024-08-19",
+            "rate": 4.2693
+          },
+          {
+            "date": "2024-08-20",
+            "rate": 4.2665
+          },
+          {
+            "date": "2024-08-21",
+            "rate": 4.2879
+          },
+          {
+            "date": "2024-08-22",
+            "rate": 4.285
+          },
+          {
+            "date": "2024-08-23",
+            "rate": 4.2769
+          },
+          {
+            "date": "2024-09-02",
+            "rate": 4.2812
+          },
+          {
+            "date": "2024-09-03",
+            "rate": 4.2757
+          },
+          {
+            "date": "2024-09-04",
+            "rate": 4.2815
+          },
+          {
+            "date": "2024-09-05",
+            "rate": 4.2717
+          },
+          {
+            "date": "2024-09-06",
+            "rate": 4.279
+          },
+          {
+            "date": "2024-09-09",
+            "rate": 4.2818
+          },
+          {
+            "date": "2024-09-10",
+            "rate": 4.2827
+          },
+          {
+            "date": "2024-09-11",
+            "rate": 4.2864
+          },
+          {
+            "date": "2024-09-12",
+            "rate": 4.2986
+          },
+          {
+            "date": "2024-09-13",
+            "rate": 4.2883
+          },
+          {
+            "date": "2024-09-16",
+            "rate": 4.2753
+          },
+          {
+            "date": "2024-09-17",
+            "rate": 4.2748
+          },
+          {
+            "date": "2024-09-18",
+            "rate": 4.2691
+          },
+          {
+            "date": "2024-09-19",
+            "rate": 4.2693
+          },
+          {
+            "date": "2024-09-20",
+            "rate": 4.2779
+          },
+          {
+            "date": "2024-09-23",
+            "rate": 4.2785
+          },
+          {
+            "date": "2024-09-24",
+            "rate": 4.2668
+          },
+          {
+            "date": "2024-09-25",
+            "rate": 4.2634
+          },
+          {
+            "date": "2024-10-03",
+            "rate": 4.299
+          },
+          {
+            "date": "2024-10-04",
+            "rate": 4.313
+          },
+          {
+            "date": "2024-10-07",
+            "rate": 4.3185
+          },
+          {
+            "date": "2024-10-08",
+            "rate": 4.3203
+          },
+          {
+            "date": "2024-10-09",
+            "rate": 4.3026
+          },
+          {
+            "date": "2024-10-10",
+            "rate": 4.3029
+          },
+          {
+            "date": "2024-10-11",
+            "rate": 4.2926
+          },
+          {
+            "date": "2024-10-14",
+            "rate": 4.2928
+          },
+          {
+            "date": "2024-10-15",
+            "rate": 4.2913
+          },
+          {
+            "date": "2024-10-16",
+            "rate": 4.2955
+          },
+          {
+            "date": "2024-10-17",
+            "rate": 4.3174
+          },
+          {
+            "date": "2024-10-18",
+            "rate": 4.3048
+          },
+          {
+            "date": "2024-10-21",
+            "rate": 4.3178
+          },
+          {
+            "date": "2024-10-22",
+            "rate": 4.3159
+          },
+          {
+            "date": "2024-10-23",
+            "rate": 4.3344
+          },
+          {
+            "date": "2024-10-24",
+            "rate": 4.3396
+          },
+          {
+            "date": "2024-10-25",
+            "rate": 4.3533
+          },
+          {
+            "date": "2024-10-28",
+            "rate": 4.3478
+          },
+          {
+            "date": "2024-11-04",
+            "rate": 4.3443
+          },
+          {
+            "date": "2024-11-05",
+            "rate": 4.3607
+          },
+          {
+            "date": "2024-11-06",
+            "rate": 4.3662
+          },
+          {
+            "date": "2024-11-07",
+            "rate": 4.3431
+          },
+          {
+            "date": "2024-11-08",
+            "rate": 4.3244
+          },
+          {
+            "date": "2024-11-12",
+            "rate": 4.357
+          },
+          {
+            "date": "2024-11-13",
+            "rate": 4.3416
+          },
+          {
+            "date": "2024-11-14",
+            "rate": 4.3365
+          },
+          {
+            "date": "2024-11-15",
+            "rate": 4.3198
+          },
+          {
+            "date": "2024-11-18",
+            "rate": 4.332
+          },
+          {
+            "date": "2024-11-19",
+            "rate": 4.3308
+          },
+          {
+            "date": "2024-11-20",
+            "rate": 4.3404
+          },
+          {
+            "date": "2024-11-21",
+            "rate": 4.3469
+          },
+          {
+            "date": "2024-11-22",
+            "rate": 4.343
+          },
+          {
+            "date": "2024-11-25",
+            "rate": 4.3319
+          },
+          {
+            "date": "2024-11-26",
+            "rate": 4.3157
+          },
+          {
+            "date": "2024-11-27",
+            "rate": 4.309
+          },
+          {
+            "date": "2024-11-28",
+            "rate": 4.3085
+          },
+          {
+            "date": "2024-11-29",
+            "rate": 4.3043
+          },
+          {
+            "date": "2024-12-02",
+            "rate": 4.2923
+          },
+          {
+            "date": "2024-12-03",
+            "rate": 4.2927
+          },
+          {
+            "date": "2024-12-04",
+            "rate": 4.2899
+          },
+          {
+            "date": "2024-12-05",
+            "rate": 4.2695
+          },
+          {
+            "date": "2024-12-06",
+            "rate": 4.2669
+          },
+          {
+            "date": "2024-12-09",
+            "rate": 4.2581
+          },
+          {
+            "date": "2024-12-10",
+            "rate": 4.2672
+          },
+          {
+            "date": "2024-12-11",
+            "rate": 4.2661
+          },
+          {
+            "date": "2024-12-12",
+            "rate": 4.2818
+          },
+          {
+            "date": "2024-12-13",
+            "rate": 4.2722
+          },
+          {
+            "date": "2024-12-16",
+            "rate": 4.2622
+          },
+          {
+            "date": "2024-12-17",
+            "rate": 4.2599
+          },
+          {
+            "date": "2024-12-18",
+            "rate": 4.2628
+          },
+          {
+            "date": "2024-12-19",
+            "rate": 4.2633
+          },
+          {
+            "date": "2024-12-20",
+            "rate": 4.2572
+          },
+          {
+            "date": "2024-12-23",
+            "rate": 4.2621
+          },
+          {
+            "date": "2024-12-24",
+            "rate": 4.2739
+          },
+          {
+            "date": "2024-12-27",
+            "rate": 4.2747
+          }
+        ],
+        "GBP": [
+          {
+            "date": "2024-01-02",
+            "rate": 5.0152
+          },
+          {
+            "date": "2024-01-03",
+            "rate": 5.0397
+          },
+          {
+            "date": "2024-01-04",
+            "rate": 5.0481
+          },
+          {
+            "date": "2024-01-05",
+            "rate": 5.044
+          },
+          {
+            "date": "2024-01-08",
+            "rate": 5.0543
+          },
+          {
+            "date": "2024-01-09",
+            "rate": 5.0446
+          },
+          {
+            "date": "2024-01-10",
+            "rate": 5.0466
+          },
+          {
+            "date": "2024-01-11",
+            "rate": 5.0549
+          },
+          {
+            "date": "2024-01-12",
+            "rate": 5.0688
+          },
+          {
+            "date": "2024-01-15",
+            "rate": 5.0861
+          },
+          {
+            "date": "2024-01-16",
+            "rate": 5.1027
+          },
+          {
+            "date": "2024-01-17",
+            "rate": 5.1274
+          },
+          {
+            "date": "2024-01-18",
+            "rate": 5.1253
+          },
+          {
+            "date": "2024-01-19",
+            "rate": 5.1103
+          },
+          {
+            "date": "2024-01-22",
+            "rate": 5.0784
+          },
+          {
+            "date": "2024-01-23",
+            "rate": 5.1084
+          },
+          {
+            "date": "2024-01-24",
+            "rate": 5.1223
+          },
+          {
+            "date": "2024-01-25",
+            "rate": 5.1148
+          },
+          {
+            "date": "2024-01-26",
+            "rate": 5.1357
+          },
+          {
+            "date": "2024-01-29",
+            "rate": 5.123
+          },
+          {
+            "date": "2024-01-30",
+            "rate": 5.1106
+          },
+          {
+            "date": "2024-01-31",
+            "rate": 5.0848
+          },
+          {
+            "date": "2024-02-05",
+            "rate": 5.0712
+          },
+          {
+            "date": "2024-02-06",
+            "rate": 5.0777
+          },
+          {
+            "date": "2024-02-07",
+            "rate": 5.099
+          },
+          {
+            "date": "2024-02-08",
+            "rate": 5.0892
+          },
+          {
+            "date": "2024-02-09",
+            "rate": 5.0559
+          },
+          {
+            "date": "2024-02-12",
+            "rate": 5.0721
+          },
+          {
+            "date": "2024-02-13",
+            "rate": 5.0786
+          },
+          {
+            "date": "2024-02-14",
+            "rate": 5.0902
+          },
+          {
+            "date": "2024-02-15",
+            "rate": 5.084
+          },
+          {
+            "date": "2024-02-16",
+            "rate": 5.0753
+          },
+          {
+            "date": "2024-02-19",
+            "rate": 5.0796
+          },
+          {
+            "date": "2024-02-20",
+            "rate": 5.0407
+          },
+          {
+            "date": "2024-02-21",
+            "rate": 5.0406
+          },
+          {
+            "date": "2024-02-22",
+            "rate": 5.0454
+          },
+          {
+            "date": "2024-02-23",
+            "rate": 5.0691
+          },
+          {
+            "date": "2024-02-26",
+            "rate": 5.0435
+          },
+          {
+            "date": "2024-03-04",
+            "rate": 5.048
+          },
+          {
+            "date": "2024-03-05",
+            "rate": 5.0535
+          },
+          {
+            "date": "2024-03-06",
+            "rate": 5.0452
+          },
+          {
+            "date": "2024-03-07",
+            "rate": 5.0336
+          },
+          {
+            "date": "2024-03-08",
+            "rate": 5.0536
+          },
+          {
+            "date": "2024-03-11",
+            "rate": 5.0423
+          },
+          {
+            "date": "2024-03-12",
+            "rate": 5.0084
+          },
+          {
+            "date": "2024-03-13",
+            "rate": 5.0171
+          },
+          {
+            "date": "2024-03-14",
+            "rate": 5.0214
+          },
+          {
+            "date": "2024-03-15",
+            "rate": 5.0233
+          },
+          {
+            "date": "2024-03-18",
+            "rate": 5.0343
+          },
+          {
+            "date": "2024-03-19",
+            "rate": 5.0516
+          },
+          {
+            "date": "2024-03-20",
+            "rate": 5.0635
+          },
+          {
+            "date": "2024-03-21",
+            "rate": 5.0367
+          },
+          {
+            "date": "2024-03-22",
+            "rate": 5.0257
+          },
+          {
+            "date": "2024-03-25",
+            "rate": 5.0246
+          },
+          {
+            "date": "2024-03-26",
+            "rate": 5.0243
+          },
+          {
+            "date": "2024-03-27",
+            "rate": 5.0327
+          },
+          {
+            "date": "2024-03-28",
+            "rate": 5.0474
+          },
+          {
+            "date": "2024-03-29",
+            "rate": 5.03
+          },
+          {
+            "date": "2024-04-04",
+            "rate": 5.0042
+          },
+          {
+            "date": "2024-04-05",
+            "rate": 5.0003
+          },
+          {
+            "date": "2024-04-08",
+            "rate": 4.9915
+          },
+          {
+            "date": "2024-04-09",
+            "rate": 4.966
+          },
+          {
+            "date": "2024-04-10",
+            "rate": 4.9843
+          },
+          {
+            "date": "2024-04-11",
+            "rate": 4.9835
+          },
+          {
+            "date": "2024-04-12",
+            "rate": 5.0007
+          },
+          {
+            "date": "2024-04-15",
+            "rate": 5.0192
+          },
+          {
+            "date": "2024-04-16",
+            "rate": 5.0609
+          },
+          {
+            "date": "2024-04-17",
+            "rate": 5.0812
+          },
+          {
+            "date": "2024-04-18",
+            "rate": 5.0589
+          },
+          {
+            "date": "2024-04-19",
+            "rate": 5.0615
+          },
+          {
+            "date": "2024-04-22",
+            "rate": 5.0131
+          },
+          {
+            "date": "2024-04-23",
+            "rate": 5.0238
+          },
+          {
+            "date": "2024-04-24",
+            "rate": 5.022
+          },
+          {
+            "date": "2024-04-25",
+            "rate": 5.0427
+          },
+          {
+            "date": "2024-04-26",
+            "rate": 5.0414
+          },
+          {
+            "date": "2024-05-06",
+            "rate": 5.0583
+          },
+          {
+            "date": "2024-05-07",
+            "rate": 5.0228
+          },
+          {
+            "date": "2024-05-08",
+            "rate": 5.0157
+          },
+          {
+            "date": "2024-05-09",
+            "rate": 4.9986
+          },
+          {
+            "date": "2024-05-10",
+            "rate": 4.9961
+          },
+          {
+            "date": "2024-05-13",
+            "rate": 4.9947
+          },
+          {
+            "date": "2024-05-14",
+            "rate": 4.9741
+          },
+          {
+            "date": "2024-05-15",
+            "rate": 4.9651
+          },
+          {
+            "date": "2024-05-16",
+            "rate": 4.9679
+          },
+          {
+            "date": "2024-05-17",
+            "rate": 4.979
+          },
+          {
+            "date": "2024-05-20",
+            "rate": 4.9743
+          },
+          {
+            "date": "2024-05-21",
+            "rate": 4.9798
+          },
+          {
+            "date": "2024-05-22",
+            "rate": 4.995
+          },
+          {
+            "date": "2024-05-23",
+            "rate": 5.0113
+          },
+          {
+            "date": "2024-05-24",
+            "rate": 5.0022
+          },
+          {
+            "date": "2024-06-03",
+            "rate": 5.0181
+          },
+          {
+            "date": "2024-06-04",
+            "rate": 5.0403
+          },
+          {
+            "date": "2024-06-05",
+            "rate": 5.0606
+          },
+          {
+            "date": "2024-06-06",
+            "rate": 5.0543
+          },
+          {
+            "date": "2024-06-07",
+            "rate": 5.0371
+          },
+          {
+            "date": "2024-06-10",
+            "rate": 5.1033
+          },
+          {
+            "date": "2024-06-11",
+            "rate": 5.1464
+          },
+          {
+            "date": "2024-06-12",
+            "rate": 5.1465
+          },
+          {
+            "date": "2024-06-13",
+            "rate": 5.135
+          },
+          {
+            "date": "2024-06-14",
+            "rate": 5.1857
+          },
+          {
+            "date": "2024-06-17",
+            "rate": 5.1616
+          },
+          {
+            "date": "2024-06-18",
+            "rate": 5.1423
+          },
+          {
+            "date": "2024-06-19",
+            "rate": 5.1421
+          },
+          {
+            "date": "2024-06-20",
+            "rate": 5.1224
+          },
+          {
+            "date": "2024-06-21",
+            "rate": 5.1291
+          },
+          {
+            "date": "2024-06-24",
+            "rate": 5.1037
+          },
+          {
+            "date": "2024-06-25",
+            "rate": 5.0774
+          },
+          {
+            "date": "2024-06-26",
+            "rate": 5.1027
+          },
+          {
+            "date": "2024-06-27",
+            "rate": 5.0934
+          },
+          {
+            "date": "2024-06-28",
+            "rate": 5.0942
+          },
+          {
+            "date": "2024-07-02",
+            "rate": 5.0988
+          },
+          {
+            "date": "2024-07-03",
+            "rate": 5.0768
+          },
+          {
+            "date": "2024-07-04",
+            "rate": 5.075
+          },
+          {
+            "date": "2024-07-05",
+            "rate": 5.0582
+          },
+          {
+            "date": "2024-07-08",
+            "rate": 5.06
+          },
+          {
+            "date": "2024-07-09",
+            "rate": 5.0444
+          },
+          {
+            "date": "2024-07-10",
+            "rate": 5.0318
+          },
+          {
+            "date": "2024-07-11",
+            "rate": 5.0547
+          },
+          {
+            "date": "2024-07-12",
+            "rate": 5.0621
+          },
+          {
+            "date": "2024-07-15",
+            "rate": 5.0603
+          },
+          {
+            "date": "2024-07-16",
+            "rate": 5.0668
+          },
+          {
+            "date": "2024-07-17",
+            "rate": 5.1088
+          },
+          {
+            "date": "2024-07-18",
+            "rate": 5.1032
+          },
+          {
+            "date": "2024-07-19",
+            "rate": 5.0974
+          },
+          {
+            "date": "2024-07-22",
+            "rate": 5.0813
+          },
+          {
+            "date": "2024-07-23",
+            "rate": 5.0861
+          },
+          {
+            "date": "2024-07-24",
+            "rate": 5.0939
+          },
+          {
+            "date": "2024-07-25",
+            "rate": 5.1053
+          },
+          {
+            "date": "2024-07-26",
+            "rate": 5.0709
+          },
+          {
+            "date": "2024-07-29",
+            "rate": 5.0683
+          },
+          {
+            "date": "2024-07-30",
+            "rate": 5.0882
+          },
+          {
+            "date": "2024-07-31",
+            "rate": 5.0922
+          },
+          {
+            "date": "2024-08-01",
+            "rate": 5.0867
+          },
+          {
+            "date": "2024-08-02",
+            "rate": 5.0525
+          },
+          {
+            "date": "2024-08-05",
+            "rate": 5.0196
+          },
+          {
+            "date": "2024-08-06",
+            "rate": 5.0253
+          },
+          {
+            "date": "2024-08-07",
+            "rate": 5.0204
+          },
+          {
+            "date": "2024-08-08",
+            "rate": 5.0195
+          },
+          {
+            "date": "2024-08-09",
+            "rate": 5.0556
+          },
+          {
+            "date": "2024-08-12",
+            "rate": 5.0404
+          },
+          {
+            "date": "2024-08-13",
+            "rate": 5.0319
+          },
+          {
+            "date": "2024-08-14",
+            "rate": 5.0036
+          },
+          {
+            "date": "2024-08-16",
+            "rate": 5.014
+          },
+          {
+            "date": "2024-08-19",
+            "rate": 5.0177
+          },
+          {
+            "date": "2024-08-20",
+            "rate": 5.0062
+          },
+          {
+            "date": "2024-08-21",
+            "rate": 5.0183
+          },
+          {
+            "date": "2024-08-22",
+            "rate": 5.0427
+          },
+          {
+            "date": "2024-08-23",
+            "rate": 5.0486
+          },
+          {
+            "date": "2024-09-02",
+            "rate": 5.0806
+          },
+          {
+            "date": "2024-09-03",
+            "rate": 5.0777
+          },
+          {
+            "date": "2024-09-04",
+            "rate": 5.0828
+          },
+          {
+            "date": "2024-09-05",
+            "rate": 5.0685
+          },
+          {
+            "date": "2024-09-06",
+            "rate": 5.0678
+          },
+          {
+            "date": "2024-09-09",
+            "rate": 5.0729
+          },
+          {
+            "date": "2024-09-10",
+            "rate": 5.077
+          },
+          {
+            "date": "2024-09-11",
+            "rate": 5.0778
+          },
+          {
+            "date": "2024-09-12",
+            "rate": 5.0916
+          },
+          {
+            "date": "2024-09-13",
+            "rate": 5.0812
+          },
+          {
+            "date": "2024-09-16",
+            "rate": 5.0694
+          },
+          {
+            "date": "2024-09-17",
+            "rate": 5.0742
+          },
+          {
+            "date": "2024-09-18",
+            "rate": 5.0657
+          },
+          {
+            "date": "2024-09-19",
+            "rate": 5.0728
+          },
+          {
+            "date": "2024-09-20",
+            "rate": 5.0961
+          },
+          {
+            "date": "2024-09-23",
+            "rate": 5.1187
+          },
+          {
+            "date": "2024-09-24",
+            "rate": 5.1237
+          },
+          {
+            "date": "2024-09-25",
+            "rate": 5.1001
+          },
+          {
+            "date": "2024-10-03",
+            "rate": 5.1084
+          },
+          {
+            "date": "2024-10-04",
+            "rate": 5.1465
+          },
+          {
+            "date": "2024-10-07",
+            "rate": 5.1527
+          },
+          {
+            "date": "2024-10-08",
+            "rate": 5.1478
+          },
+          {
+            "date": "2024-10-09",
+            "rate": 5.1347
+          },
+          {
+            "date": "2024-10-10",
+            "rate": 5.1452
+          },
+          {
+            "date": "2024-10-11",
+            "rate": 5.1252
+          },
+          {
+            "date": "2024-10-14",
+            "rate": 5.1334
+          },
+          {
+            "date": "2024-10-15",
+            "rate": 5.1433
+          },
+          {
+            "date": "2024-10-16",
+            "rate": 5.1323
+          },
+          {
+            "date": "2024-10-17",
+            "rate": 5.1631
+          },
+          {
+            "date": "2024-10-18",
+            "rate": 5.18
+          },
+          {
+            "date": "2024-10-21",
+            "rate": 5.1813
+          },
+          {
+            "date": "2024-10-22",
+            "rate": 5.1777
+          },
+          {
+            "date": "2024-10-23",
+            "rate": 5.2168
+          },
+          {
+            "date": "2024-10-24",
+            "rate": 5.2062
+          },
+          {
+            "date": "2024-10-25",
+            "rate": 5.2188
+          },
+          {
+            "date": "2024-10-28",
+            "rate": 5.216
+          },
+          {
+            "date": "2024-11-04",
+            "rate": 5.1715
+          },
+          {
+            "date": "2024-11-05",
+            "rate": 5.1978
+          },
+          {
+            "date": "2024-11-06",
+            "rate": 5.2368
+          },
+          {
+            "date": "2024-11-07",
+            "rate": 5.2166
+          },
+          {
+            "date": "2024-11-08",
+            "rate": 5.1992
+          },
+          {
+            "date": "2024-11-12",
+            "rate": 5.2579
+          },
+          {
+            "date": "2024-11-13",
+            "rate": 5.2092
+          },
+          {
+            "date": "2024-11-14",
+            "rate": 5.2178
+          },
+          {
+            "date": "2024-11-15",
+            "rate": 5.1743
+          },
+          {
+            "date": "2024-11-18",
+            "rate": 5.1784
+          },
+          {
+            "date": "2024-11-19",
+            "rate": 5.1844
+          },
+          {
+            "date": "2024-11-20",
+            "rate": 5.2093
+          },
+          {
+            "date": "2024-11-21",
+            "rate": 5.2215
+          },
+          {
+            "date": "2024-11-22",
+            "rate": 5.224
+          },
+          {
+            "date": "2024-11-25",
+            "rate": 5.1929
+          },
+          {
+            "date": "2024-11-26",
+            "rate": 5.1639
+          },
+          {
+            "date": "2024-11-27",
+            "rate": 5.1645
+          },
+          {
+            "date": "2024-11-28",
+            "rate": 5.1751
+          },
+          {
+            "date": "2024-11-29",
+            "rate": 5.1747
+          },
+          {
+            "date": "2024-12-02",
+            "rate": 5.1871
+          },
+          {
+            "date": "2024-12-03",
+            "rate": 5.1726
+          },
+          {
+            "date": "2024-12-04",
+            "rate": 5.1776
+          },
+          {
+            "date": "2024-12-05",
+            "rate": 5.1589
+          },
+          {
+            "date": "2024-12-06",
+            "rate": 5.1467
+          },
+          {
+            "date": "2024-12-09",
+            "rate": 5.1454
+          },
+          {
+            "date": "2024-12-10",
+            "rate": 5.168
+          },
+          {
+            "date": "2024-12-11",
+            "rate": 5.172
+          },
+          {
+            "date": "2024-12-12",
+            "rate": 5.1979
+          },
+          {
+            "date": "2024-12-13",
+            "rate": 5.1491
+          },
+          {
+            "date": "2024-12-16",
+            "rate": 5.1339
+          },
+          {
+            "date": "2024-12-17",
+            "rate": 5.1538
+          },
+          {
+            "date": "2024-12-18",
+            "rate": 5.1536
+          },
+          {
+            "date": "2024-12-19",
+            "rate": 5.1837
+          },
+          {
+            "date": "2024-12-20",
+            "rate": 5.1264
+          },
+          {
+            "date": "2024-12-23",
+            "rate": 5.1472
+          },
+          {
+            "date": "2024-12-24",
+            "rate": 5.1549
+          },
+          {
+            "date": "2024-12-27",
+            "rate": 5.1332
+          }
+        ],
+        "USD": [
+          {
+            "date": "2024-01-02",
+            "rate": 3.9432
+          },
+          {
+            "date": "2024-01-03",
+            "rate": 3.9909
+          },
+          {
+            "date": "2024-01-04",
+            "rate": 3.9684
+          },
+          {
+            "date": "2024-01-05",
+            "rate": 3.985
+          },
+          {
+            "date": "2024-01-08",
+            "rate": 3.9812
+          },
+          {
+            "date": "2024-01-09",
+            "rate": 3.9612
+          },
+          {
+            "date": "2024-01-10",
+            "rate": 3.9656
+          },
+          {
+            "date": "2024-01-11",
+            "rate": 3.968
+          },
+          {
+            "date": "2024-01-12",
+            "rate": 3.9746
+          },
+          {
+            "date": "2024-01-15",
+            "rate": 3.9963
+          },
+          {
+            "date": "2024-01-16",
+            "rate": 4.0358
+          },
+          {
+            "date": "2024-01-17",
+            "rate": 4.0434
+          },
+          {
+            "date": "2024-01-18",
+            "rate": 4.0437
+          },
+          {
+            "date": "2024-01-19",
+            "rate": 4.0289
+          },
+          {
+            "date": "2024-01-22",
+            "rate": 3.9972
+          },
+          {
+            "date": "2024-01-23",
+            "rate": 4.0133
+          },
+          {
+            "date": "2024-01-24",
+            "rate": 4.0131
+          },
+          {
+            "date": "2024-01-25",
+            "rate": 4.0189
+          },
+          {
+            "date": "2024-01-26",
+            "rate": 4.0393
+          },
+          {
+            "date": "2024-01-29",
+            "rate": 4.0326
+          },
+          {
+            "date": "2024-01-30",
+            "rate": 4.0301
+          },
+          {
+            "date": "2024-01-31",
+            "rate": 4.0135
+          },
+          {
+            "date": "2024-02-05",
+            "rate": 4.0244
+          },
+          {
+            "date": "2024-02-06",
+            "rate": 4.0484
+          },
+          {
+            "date": "2024-02-07",
+            "rate": 4.0362
+          },
+          {
+            "date": "2024-02-08",
+            "rate": 4.0292
+          },
+          {
+            "date": "2024-02-09",
+            "rate": 4.0096
+          },
+          {
+            "date": "2024-02-12",
+            "rate": 4.0189
+          },
+          {
+            "date": "2024-02-13",
+            "rate": 4.0136
+          },
+          {
+            "date": "2024-02-14",
+            "rate": 4.0593
+          },
+          {
+            "date": "2024-02-15",
+            "rate": 4.0495
+          },
+          {
+            "date": "2024-02-16",
+            "rate": 4.0325
+          },
+          {
+            "date": "2024-02-19",
+            "rate": 4.0269
+          },
+          {
+            "date": "2024-02-20",
+            "rate": 3.9994
+          },
+          {
+            "date": "2024-02-21",
+            "rate": 3.9966
+          },
+          {
+            "date": "2024-02-22",
+            "rate": 3.9804
+          },
+          {
+            "date": "2024-02-23",
+            "rate": 4.005
+          },
+          {
+            "date": "2024-02-26",
+            "rate": 3.9776
+          },
+          {
+            "date": "2024-03-04",
+            "rate": 3.982
+          },
+          {
+            "date": "2024-03-05",
+            "rate": 3.9838
+          },
+          {
+            "date": "2024-03-06",
+            "rate": 3.963
+          },
+          {
+            "date": "2024-03-07",
+            "rate": 3.9485
+          },
+          {
+            "date": "2024-03-08",
+            "rate": 3.9392
+          },
+          {
+            "date": "2024-03-11",
+            "rate": 3.9262
+          },
+          {
+            "date": "2024-03-12",
+            "rate": 3.9162
+          },
+          {
+            "date": "2024-03-13",
+            "rate": 3.9269
+          },
+          {
+            "date": "2024-03-14",
+            "rate": 3.9183
+          },
+          {
+            "date": "2024-03-15",
+            "rate": 3.9392
+          },
+          {
+            "date": "2024-03-18",
+            "rate": 3.9528
+          },
+          {
+            "date": "2024-03-19",
+            "rate": 3.9866
+          },
+          {
+            "date": "2024-03-20",
+            "rate": 3.9895
+          },
+          {
+            "date": "2024-03-21",
+            "rate": 3.9431
+          },
+          {
+            "date": "2024-03-22",
+            "rate": 3.9928
+          },
+          {
+            "date": "2024-03-25",
+            "rate": 3.9833
+          },
+          {
+            "date": "2024-03-26",
+            "rate": 3.9704
+          },
+          {
+            "date": "2024-03-27",
+            "rate": 3.9857
+          },
+          {
+            "date": "2024-03-28",
+            "rate": 4.0081
+          },
+          {
+            "date": "2024-03-29",
+            "rate": 3.9886
+          },
+          {
+            "date": "2024-04-04",
+            "rate": 3.9515
+          },
+          {
+            "date": "2024-04-05",
+            "rate": 3.9571
+          },
+          {
+            "date": "2024-04-08",
+            "rate": 3.9546
+          },
+          {
+            "date": "2024-04-09",
+            "rate": 3.9223
+          },
+          {
+            "date": "2024-04-10",
+            "rate": 3.9264
+          },
+          {
+            "date": "2024-04-11",
+            "rate": 3.9707
+          },
+          {
+            "date": "2024-04-12",
+            "rate": 3.9983
+          },
+          {
+            "date": "2024-04-15",
+            "rate": 4.0209
+          },
+          {
+            "date": "2024-04-16",
+            "rate": 4.0687
+          },
+          {
+            "date": "2024-04-17",
+            "rate": 4.0741
+          },
+          {
+            "date": "2024-04-18",
+            "rate": 4.0559
+          },
+          {
+            "date": "2024-04-19",
+            "rate": 4.0688
+          },
+          {
+            "date": "2024-04-22",
+            "rate": 4.054
+          },
+          {
+            "date": "2024-04-23",
+            "rate": 4.061
+          },
+          {
+            "date": "2024-04-24",
+            "rate": 4.0417
+          },
+          {
+            "date": "2024-04-25",
+            "rate": 4.0276
+          },
+          {
+            "date": "2024-04-26",
+            "rate": 4.0245
+          },
+          {
+            "date": "2024-05-06",
+            "rate": 4.0202
+          },
+          {
+            "date": "2024-05-07",
+            "rate": 4.0056
+          },
+          {
+            "date": "2024-05-08",
+            "rate": 4.0202
+          },
+          {
+            "date": "2024-05-09",
+            "rate": 4.0076
+          },
+          {
+            "date": "2024-05-10",
+            "rate": 3.9866
+          },
+          {
+            "date": "2024-05-13",
+            "rate": 3.9853
+          },
+          {
+            "date": "2024-05-14",
+            "rate": 3.9701
+          },
+          {
+            "date": "2024-05-15",
+            "rate": 3.9368
+          },
+          {
+            "date": "2024-05-16",
+            "rate": 3.9195
+          },
+          {
+            "date": "2024-05-17",
+            "rate": 3.9363
+          },
+          {
+            "date": "2024-05-20",
+            "rate": 3.9149
+          },
+          {
+            "date": "2024-05-21",
+            "rate": 3.9175
+          },
+          {
+            "date": "2024-05-22",
+            "rate": 3.9243
+          },
+          {
+            "date": "2024-05-23",
+            "rate": 3.9394
+          },
+          {
+            "date": "2024-05-24",
+            "rate": 3.9376
+          },
+          {
+            "date": "2024-06-03",
+            "rate": 3.9501
+          },
+          {
+            "date": "2024-06-04",
+            "rate": 3.9448
+          },
+          {
+            "date": "2024-06-05",
+            "rate": 3.9607
+          },
+          {
+            "date": "2024-06-06",
+            "rate": 3.953
+          },
+          {
+            "date": "2024-06-07",
+            "rate": 3.9389
+          },
+          {
+            "date": "2024-06-10",
+            "rate": 4.0159
+          },
+          {
+            "date": "2024-06-11",
+            "rate": 4.0443
+          },
+          {
+            "date": "2024-06-12",
+            "rate": 4.0342
+          },
+          {
+            "date": "2024-06-13",
+            "rate": 4.0119
+          },
+          {
+            "date": "2024-06-14",
+            "rate": 4.076
+          },
+          {
+            "date": "2024-06-17",
+            "rate": 4.0728
+          },
+          {
+            "date": "2024-06-18",
+            "rate": 4.0549
+          },
+          {
+            "date": "2024-06-19",
+            "rate": 4.0387
+          },
+          {
+            "date": "2024-06-20",
+            "rate": 4.0345
+          },
+          {
+            "date": "2024-06-21",
+            "rate": 4.0527
+          },
+          {
+            "date": "2024-06-24",
+            "rate": 4.0319
+          },
+          {
+            "date": "2024-06-25",
+            "rate": 3.9975
+          },
+          {
+            "date": "2024-06-26",
+            "rate": 4.0291
+          },
+          {
+            "date": "2024-06-27",
+            "rate": 4.0312
+          },
+          {
+            "date": "2024-06-28",
+            "rate": 4.032
+          },
+          {
+            "date": "2024-07-02",
+            "rate": 4.0375
+          },
+          {
+            "date": "2024-07-03",
+            "rate": 3.999
+          },
+          {
+            "date": "2024-07-04",
+            "rate": 3.9784
+          },
+          {
+            "date": "2024-07-05",
+            "rate": 3.9581
+          },
+          {
+            "date": "2024-07-08",
+            "rate": 3.947
+          },
+          {
+            "date": "2024-07-09",
+            "rate": 3.9391
+          },
+          {
+            "date": "2024-07-10",
+            "rate": 3.9324
+          },
+          {
+            "date": "2024-07-11",
+            "rate": 3.9257
+          },
+          {
+            "date": "2024-07-12",
+            "rate": 3.9099
+          },
+          {
+            "date": "2024-07-15",
+            "rate": 3.896
+          },
+          {
+            "date": "2024-07-16",
+            "rate": 3.9083
+          },
+          {
+            "date": "2024-07-17",
+            "rate": 3.921
+          },
+          {
+            "date": "2024-07-18",
+            "rate": 3.9296
+          },
+          {
+            "date": "2024-07-19",
+            "rate": 3.9461
+          },
+          {
+            "date": "2024-07-22",
+            "rate": 3.9307
+          },
+          {
+            "date": "2024-07-23",
+            "rate": 3.9355
+          },
+          {
+            "date": "2024-07-24",
+            "rate": 3.9498
+          },
+          {
+            "date": "2024-07-25",
+            "rate": 3.9619
+          },
+          {
+            "date": "2024-07-26",
+            "rate": 3.9415
+          },
+          {
+            "date": "2024-07-29",
+            "rate": 3.9556
+          },
+          {
+            "date": "2024-07-30",
+            "rate": 3.9567
+          },
+          {
+            "date": "2024-07-31",
+            "rate": 3.9689
+          },
+          {
+            "date": "2024-08-01",
+            "rate": 3.9802
+          },
+          {
+            "date": "2024-08-02",
+            "rate": 3.9672
+          },
+          {
+            "date": "2024-08-05",
+            "rate": 3.9331
+          },
+          {
+            "date": "2024-08-06",
+            "rate": 3.9467
+          },
+          {
+            "date": "2024-08-07",
+            "rate": 3.9526
+          },
+          {
+            "date": "2024-08-08",
+            "rate": 3.952
+          },
+          {
+            "date": "2024-08-09",
+            "rate": 3.9604
+          },
+          {
+            "date": "2024-08-12",
+            "rate": 3.9488
+          },
+          {
+            "date": "2024-08-13",
+            "rate": 3.9314
+          },
+          {
+            "date": "2024-08-14",
+            "rate": 3.8963
+          },
+          {
+            "date": "2024-08-16",
+            "rate": 3.8914
+          },
+          {
+            "date": "2024-08-19",
+            "rate": 3.8682
+          },
+          {
+            "date": "2024-08-20",
+            "rate": 3.8506
+          },
+          {
+            "date": "2024-08-21",
+            "rate": 3.8565
+          },
+          {
+            "date": "2024-08-22",
+            "rate": 3.8456
+          },
+          {
+            "date": "2024-08-23",
+            "rate": 3.8453
+          },
+          {
+            "date": "2024-09-02",
+            "rate": 3.8684
+          },
+          {
+            "date": "2024-09-03",
+            "rate": 3.8701
+          },
+          {
+            "date": "2024-09-04",
+            "rate": 3.8738
+          },
+          {
+            "date": "2024-09-05",
+            "rate": 3.8487
+          },
+          {
+            "date": "2024-09-06",
+            "rate": 3.8489
+          },
+          {
+            "date": "2024-09-09",
+            "rate": 3.8758
+          },
+          {
+            "date": "2024-09-10",
+            "rate": 3.8798
+          },
+          {
+            "date": "2024-09-11",
+            "rate": 3.8816
+          },
+          {
+            "date": "2024-09-12",
+            "rate": 3.9025
+          },
+          {
+            "date": "2024-09-13",
+            "rate": 3.8659
+          },
+          {
+            "date": "2024-09-16",
+            "rate": 3.8438
+          },
+          {
+            "date": "2024-09-17",
+            "rate": 3.8354
+          },
+          {
+            "date": "2024-09-18",
+            "rate": 3.8358
+          },
+          {
+            "date": "2024-09-19",
+            "rate": 3.8249
+          },
+          {
+            "date": "2024-09-20",
+            "rate": 3.8317
+          },
+          {
+            "date": "2024-09-23",
+            "rate": 3.8571
+          },
+          {
+            "date": "2024-09-24",
+            "rate": 3.83
+          },
+          {
+            "date": "2024-09-25",
+            "rate": 3.8117
+          },
+          {
+            "date": "2024-10-03",
+            "rate": 3.8951
+          },
+          {
+            "date": "2024-10-04",
+            "rate": 3.9118
+          },
+          {
+            "date": "2024-10-07",
+            "rate": 3.9368
+          },
+          {
+            "date": "2024-10-08",
+            "rate": 3.9299
+          },
+          {
+            "date": "2024-10-09",
+            "rate": 3.9266
+          },
+          {
+            "date": "2024-10-10",
+            "rate": 3.9355
+          },
+          {
+            "date": "2024-10-11",
+            "rate": 3.9204
+          },
+          {
+            "date": "2024-10-14",
+            "rate": 3.9288
+          },
+          {
+            "date": "2024-10-15",
+            "rate": 3.9332
+          },
+          {
+            "date": "2024-10-16",
+            "rate": 3.9468
+          },
+          {
+            "date": "2024-10-17",
+            "rate": 3.9786
+          },
+          {
+            "date": "2024-10-18",
+            "rate": 3.9718
+          },
+          {
+            "date": "2024-10-21",
+            "rate": 3.9775
+          },
+          {
+            "date": "2024-10-22",
+            "rate": 3.9862
+          },
+          {
+            "date": "2024-10-23",
+            "rate": 4.0176
+          },
+          {
+            "date": "2024-10-24",
+            "rate": 4.0168
+          },
+          {
+            "date": "2024-10-25",
+            "rate": 4.0219
+          },
+          {
+            "date": "2024-10-28",
+            "rate": 4.0207
+          },
+          {
+            "date": "2024-11-04",
+            "rate": 3.9869
+          },
+          {
+            "date": "2024-11-05",
+            "rate": 4.0038
+          },
+          {
+            "date": "2024-11-06",
+            "rate": 4.0595
+          },
+          {
+            "date": "2024-11-07",
+            "rate": 4.0414
+          },
+          {
+            "date": "2024-11-08",
+            "rate": 4.0117
+          },
+          {
+            "date": "2024-11-12",
+            "rate": 4.1011
+          },
+          {
+            "date": "2024-11-13",
+            "rate": 4.0853
+          },
+          {
+            "date": "2024-11-14",
+            "rate": 4.122
+          },
+          {
+            "date": "2024-11-15",
+            "rate": 4.0898
+          },
+          {
+            "date": "2024-11-18",
+            "rate": 4.0997
+          },
+          {
+            "date": "2024-11-19",
+            "rate": 4.1052
+          },
+          {
+            "date": "2024-11-20",
+            "rate": 4.112
+          },
+          {
+            "date": "2024-11-21",
+            "rate": 4.1332
+          },
+          {
+            "date": "2024-11-22",
+            "rate": 4.1752
+          },
+          {
+            "date": "2024-11-25",
+            "rate": 4.1297
+          },
+          {
+            "date": "2024-11-26",
+            "rate": 4.1073
+          },
+          {
+            "date": "2024-11-27",
+            "rate": 4.0974
+          },
+          {
+            "date": "2024-11-28",
+            "rate": 4.0907
+          },
+          {
+            "date": "2024-11-29",
+            "rate": 4.077
+          },
+          {
+            "date": "2024-12-02",
+            "rate": 4.0827
+          },
+          {
+            "date": "2024-12-03",
+            "rate": 4.0803
+          },
+          {
+            "date": "2024-12-04",
+            "rate": 4.0845
+          },
+          {
+            "date": "2024-12-05",
+            "rate": 4.0554
+          },
+          {
+            "date": "2024-12-06",
+            "rate": 4.0341
+          },
+          {
+            "date": "2024-12-09",
+            "rate": 4.0298
+          },
+          {
+            "date": "2024-12-10",
+            "rate": 4.0518
+          },
+          {
+            "date": "2024-12-11",
+            "rate": 4.0628
+          },
+          {
+            "date": "2024-12-12",
+            "rate": 4.074
+          },
+          {
+            "date": "2024-12-13",
+            "rate": 4.0738
+          },
+          {
+            "date": "2024-12-16",
+            "rate": 4.0571
+          },
+          {
+            "date": "2024-12-17",
+            "rate": 4.0623
+          },
+          {
+            "date": "2024-12-18",
+            "rate": 4.0621
+          },
+          {
+            "date": "2024-12-19",
+            "rate": 4.0944
+          },
+          {
+            "date": "2024-12-20",
+            "rate": 4.1002
+          },
+          {
+            "date": "2024-12-23",
+            "rate": 4.095
+          },
+          {
+            "date": "2024-12-24",
+            "rate": 4.1127
+          },
+          {
+            "date": "2024-12-27",
+            "rate": 4.1036
+          }
+        ]
+      }
+    }
+  ]
+}
