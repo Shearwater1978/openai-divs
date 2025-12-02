@@ -4,75 +4,127 @@ import numpy as np
 
 def merge_accounts(all_data: Dict[str, Dict[str, pd.DataFrame]]) -> pd.DataFrame:
     """
-    Объединяет все данные из раздела 'Trades' всех счетов в один стандартизированный DataFrame.
+    Объединяет все данные из разделов 'Trades' и 'Transfers' всех счетов
+    в один стандартизированный DataFrame, нормализует имена столбцов и определяет Action (BUY/SELL).
     """
     
-    df_list: List[pd.DataFrame] = []
+    df_trade_list: List[pd.DataFrame] = []
+    df_transfer_list: List[pd.DataFrame] = []
     
-    # 1. Сбор только раздела 'Trades'
+    # 1. Сбор и нормализация Trades и Transfers
     for account_key, sections in all_data.items():
+        
+        # Сбор Trades
         if 'Trades' in sections and not sections['Trades'].empty:
             df = sections['Trades'].copy()
             df['Account'] = account_key  
-            df_list.append(df)
+            df_trade_list.append(df)
             
-    if df_list:
-        unified_trades = pd.concat(df_list, ignore_index=True)
-        
-        # 2. Инициализация критических колонок, если они отсутствуют после объединения (чтобы избежать KeyError в следующих шагах)
-        # Это должно происходить, только если парсер не нашел колонку, но лучше гарантировать их существование.
-        CRITICAL_COLS = ['Currency', 'Quantity', 'Proceeds', 'Date/Time', 'Symbol', 'Action']
-        for col in CRITICAL_COLS:
-            if col not in unified_trades.columns:
-                print(f"WARNING: Critical column '{col}' is missing. Initializing with NaN/Default.")
-                # Инициализируем отсутствующие колонки, чтобы предотвратить сбои.
-                if col in ['Quantity', 'Proceeds']:
-                    unified_trades[col] = np.nan
-                elif col in ['Date/Time']:
-                    unified_trades[col] = pd.NaT
-                else: # Currency, Symbol, Action
-                    unified_trades[col] = ''
-        
-        # 3. Фильтрация RUB
-        if 'Currency' in unified_trades.columns:
-            EXCLUDED_CURRENCIES = ['RUB'] 
-            excluded_rub_trades = unified_trades[unified_trades['Currency'].isin(EXCLUDED_CURRENCIES)].copy()
-            
-            if not excluded_rub_trades.empty:
-                print(f"WARNING: Excluding {len(excluded_rub_trades)} trades involving unsupported currencies ({', '.join(EXCLUDED_CURRENCIES)}) from tax calculation.")
-                
-            unified_trades = unified_trades[~unified_trades['Currency'].isin(EXCLUDED_CURRENCIES)]
-        
-        # 4. Приводим к правильному типу
-        
-        # Quantity и Proceeds
-        unified_trades['Quantity'] = pd.to_numeric(unified_trades['Quantity'], errors='coerce')
-        unified_trades['Proceeds'] = pd.to_numeric(unified_trades['Proceeds'], errors='coerce')
+        # Сбор Transfers (для начального остатка/себестоимости)
+        if 'Transfers' in sections and not sections['Transfers'].empty:
+            df = sections['Transfers'].copy()
+            df['Account'] = account_key  
+            df['Action'] = 'TRANSFER'  # Временно помечаем как TRANSFER
+            # В Transfers часто отсутствует Proceeds, заполним нулем
+            if 'Proceeds' not in df.columns:
+                 df['Proceeds'] = 0.0
+            df_transfer_list.append(df)
 
-        # Date/Time
-        unified_trades['Date/Time'] = pd.to_datetime(unified_trades['Date/Time'], errors='coerce')
-        
-        # 5. Очистка от строк с NaN в ключевых полях
-        
-        # Теперь, когда все колонки гарантированно существуют, мы можем безопасно очищать по ним
-        required_subset_for_dropna = ['Date/Time', 'Quantity', 'Proceeds', 'Currency', 'Symbol', 'Action']
-        
-        # Удаляем строки, где нет данных в ключевых столбцах
-        unified_trades.dropna(subset=required_subset_for_dropna, inplace=True)
-        
-        if unified_trades.empty:
-            print("ERROR: All trade records were dropped after cleaning (likely missing critical data). Cannot proceed.")
-            return pd.DataFrame() # Возвращаем пустой DataFrame, если все удалено
-        
-        # 6. Добавляем колонки для расчетов
-        unified_trades['PLN_Rate'] = 0.0
-        unified_trades['Proceeds_PLN'] = 0.0
-        unified_trades['Cost_PLN'] = 0.0
-        unified_trades['P/L_PLN'] = 0.0
-        unified_trades['Matched_Buy_Date'] = pd.NaT 
 
-        unified_trades.sort_values(by=['Date/Time'], inplace=True)
+    # 2. Объединение Trades и Transfers
+    unified_df_list = []
+    if df_transfer_list:
+        unified_transfers = pd.concat(df_transfer_list, ignore_index=True)
+        unified_df_list.append(unified_transfers)
         
-        return unified_trades
+    if df_trade_list:
+        unified_trades = pd.concat(df_trade_list, ignore_index=True)
+        unified_df_list.append(unified_trades)
+
+    if not unified_df_list:
+        print("No trade or transfer data available after merging. Exiting.")
+        return pd.DataFrame()
+        
+    unified_data = pd.concat(unified_df_list, ignore_index=True)
     
-    return pd.DataFrame()
+    # 3. Инициализация критических колонок, если они отсутствуют после объединения
+    CRITICAL_COLS = ['Currency', 'Quantity', 'Proceeds', 'Date/Time', 'Symbol', 'Action']
+    for col in CRITICAL_COLS:
+        if col not in unified_data.columns:
+            print(f"WARNING: Critical column '{col}' is missing. Initializing with NaN/Default.")
+            if col in ['Quantity', 'Proceeds']:
+                unified_data[col] = 0.0 # Используем 0.0 для Proceeds/Quantity в transfers
+            elif col in ['Date/Time']:
+                unified_data[col] = pd.NaT
+            else: # Currency, Symbol, Action
+                unified_data[col] = ''
+    
+    # 4. Фильтрация RUB
+    EXCLUDED_CURRENCIES = ['RUB'] 
+    if 'Currency' in unified_data.columns:
+        unified_data = unified_data[~unified_data['Currency'].isin(EXCLUDED_CURRENCIES)]
+    
+    # 5. Приводим к правильному типу
+    
+    unified_data['Quantity'] = pd.to_numeric(unified_data['Quantity'], errors='coerce')
+    unified_data['Proceeds'] = pd.to_numeric(unified_data['Proceeds'], errors='coerce')
+
+    if 'Date/Time' in unified_data.columns:
+        unified_data['Date/Time'] = pd.to_datetime(unified_data['Date/Time'], errors='coerce')
+    
+    # --- КОРРЕКЦИЯ: НОРМАЛИЗАЦИЯ ПОЛЯ ACTION (Trades + Transfers) ---
+    def determine_action(row):
+        action = row['Action']
+        proceeds = row['Proceeds']
+        quantity = row['Quantity']
+
+        # 1. Обработка TRANSFER (для начального остатка)
+        if isinstance(action, str) and 'transfer' in action.lower():
+            # Inflow (Quantity > 0) должен стать BUY
+            if quantity > 0:
+                return 'BUY'
+            # Outflow (Quantity < 0) должен стать SELL (хотя это обычно не облагается налогом)
+            elif quantity < 0:
+                return 'SELL'
+            return action # Сохраняем TRANSFER, если Quantity = 0
+
+        # 2. Обработка Trades (как раньше: по знаку Proceeds)
+        elif isinstance(action, str) and 'trades' in action.lower():
+            if proceeds > 0:
+                return 'SELL'  
+            elif proceeds < 0:
+                return 'BUY'   
+        
+        # 3. Обработка пустых действий
+        elif pd.isna(action) and proceeds != 0:
+            if proceeds > 0:
+                return 'SELL'  
+            elif proceeds < 0:
+                return 'BUY'   
+                
+        return action
+
+    # Применяем функцию для определения Action
+    unified_data['Action'] = unified_data.apply(determine_action, axis=1)
+    # ----------------------------------------------------
+
+    # 6. Очистка от строк с NaN в ключевых полях
+    required_subset_for_dropna = ['Date/Time', 'Quantity', 'Proceeds', 'Currency', 'Symbol', 'Action']
+    # Применяем очистку к unified_data
+    unified_data.dropna(subset=required_subset_for_dropna, inplace=True)
+    
+    if unified_data.empty:
+        print("ERROR: All trade and transfer records were dropped after cleaning. Cannot proceed.")
+        return pd.DataFrame()
+        
+    # 7. Добавляем колонки для расчетов
+    unified_data['PLN_Rate'] = 0.0
+    unified_data['Proceeds_PLN'] = 0.0
+    unified_data['Cost_PLN'] = 0.0
+    unified_data['P/L_PLN'] = 0.0
+    unified_data['Matched_Buy_Date'] = pd.NaT 
+
+    # 8. Сортировка (ВАЖНО: Transfers должны быть раньше Trades)
+    unified_data.sort_values(by=['Date/Time'], inplace=True)
+    
+    return unified_data

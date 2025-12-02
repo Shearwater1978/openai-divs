@@ -23,30 +23,47 @@ class TaxEngine:
             if symbol not in self.stock_history:
                 self.stock_history[symbol] = []
             
+            # --- ИСПРАВЛЕНИЕ: Обработка Transfers с нулевой ценой ---
+            # Стоимость (Proceeds) для Transferred-активов может быть 0.0
+            cost_value = proceeds if pd.notna(proceeds) and proceeds != 0 else 0.0
+            
             # Сохраняем покупку: (дата, количество, стоимость, валюта)
             self.stock_history[symbol].append({
                 'date': row['Date/Time'],
                 'qty': quantity,
-                'cost': proceeds, # Proceeds для покупки всегда отрицателен
+                'cost': cost_value, # Cost будет 0.0 для Transfers или отрицательным Proceeds для Trades
                 'currency': currency
             })
+            
             # Для BUY P/L = 0
             row['P/L_PLN'] = 0.0
-            row['Cost_PLN'] = abs(row['Proceeds_PLN']) # Стоимость = |Proceeds_PLN|
+            
+            # Если Proceeds_PLN не 0, берем его как Cost_PLN. Иначе (для Transfers) Cost_PLN = 0.0
+            if row['Proceeds_PLN'] != 0.0:
+                 row['Cost_PLN'] = abs(row['Proceeds_PLN']) 
+            else:
+                 row['Cost_PLN'] = 0.0
+                 
+            row['Cost_Basis_Missing'] = False # Покупка не является "проблемной" продажей
             return row
 
         elif action == 'SELL':
             if symbol not in self.stock_history or not self.stock_history[symbol]:
-                warnings.warn(f"WARNING: Sale of {symbol} on {row['Date/Time'].date()} has no matching BUY history. P/L is calculated using Proceeds only.")
+                warnings.warn(
+                    f"WARNING: Sale of {symbol} on {row['Date/Time'].date()} has no matching BUY history. "
+                    f"Full Proceeds will be taxed. REVIEW MANUALLY."
+                )
                 
-                # Если истории нет, P/L = Proceeds_PLN, Cost = 0
+                # Если истории нет, устанавливаем флаг и рассчитываем P/L как Proceeds (худший сценарий)
                 row['Cost_PLN'] = 0.0
                 row['P/L_PLN'] = row['Proceeds_PLN']
                 row['Matched_Buy_Date'] = pd.NaT
+                row['Cost_Basis_Missing'] = True # <-- Устанавливаем флаг
                 return row
             
             remaining_qty = quantity # Количество, которое нужно продать
             total_cost_pln = 0.0
+            matched_dates = []
             
             # Идем по старым покупкам (FIFO)
             while remaining_qty > 0 and self.stock_history[symbol]:
@@ -57,7 +74,8 @@ class TaxEngine:
                 # Коэффициент, который мы используем из этой покупки
                 qty_ratio = match_qty / buy_record['qty']
                 
-                # Стоимость в валюте покупки (Proceeds покупки всегда отрицателен)
+                # Стоимость в валюте покупки (Proceeds покупки всегда отрицателен или 0.0 для Transfer)
+                # Используем abs(cost), чтобы получить положительную стоимость
                 cost_in_buy_currency = abs(buy_record['cost']) * qty_ratio
                 
                 # Получаем курс для даты покупки (T-1 от даты покупки)
@@ -75,18 +93,23 @@ class TaxEngine:
                 buy_record['qty'] -= match_qty
                 remaining_qty -= match_qty
                 
-                # Устанавливаем дату покупки, с которой сопоставлена продажа
-                row['Matched_Buy_Date'] = buy_record['date'].date()
+                # Собираем дату покупки, с которой сопоставлена продажа
+                matched_dates.append(buy_record['date'].date())
                 
                 # Удаляем полностью использованную покупку
                 if buy_record['qty'] <= 0.0001: 
                     self.stock_history[symbol].pop(0)
 
+            # Сохраняем самую старую дату покупки
+            row['Matched_Buy_Date'] = matched_dates[0] if matched_dates else pd.NaT
+            row['Cost_Basis_Missing'] = False # Себестоимость найдена
+            
             # P/L = Proceeds_PLN (от продажи) - Total_Cost_PLN (от покупок)
             row['Cost_PLN'] = total_cost_pln
             row['P/L_PLN'] = row['Proceeds_PLN'] - total_cost_pln 
             return row
             
+        row['Cost_Basis_Missing'] = False # Все остальные операции не имеют проблемы с себестоимостью
         return row
         
     def get_rate(self, currency: str, trade_date: datetime) -> Optional[float]:
@@ -107,6 +130,7 @@ class TaxEngine:
 
         # Используем .loc[:search_date] для поиска последнего курса
         try:
+            # Ищем самый последний курс ДО или В указанную дату поиска
             rate_series = rates_df.loc[:search_date].iloc[-1]
             rate = rate_series[f'Rate_PLN_{currency}']
             
@@ -124,7 +148,7 @@ class TaxEngine:
     def calculate_tax(self) -> pd.DataFrame:
         """Конвертирует все сделки в PLN и применяет FIFO."""
         
-        # --- ФИЛЬТРАЦИЯ ДАННЫХ (Защита от KeyError: 'Action') ---
+        # --- ФИЛЬТРАЦИЯ ДАННЫХ ---
         if 'Action' not in self.unified_trades.columns:
             print("ERROR: 'Action' column not found in unified trades data. Cannot calculate tax.")
             return pd.DataFrame()
@@ -152,6 +176,9 @@ class TaxEngine:
             trades_for_processing['Proceeds'] * trades_for_processing['PLN_Rate'],
             0.0
         )
+        
+        # Инициализация колонки для отметки отсутствующей себестоимости
+        trades_for_processing['Cost_Basis_Missing'] = False
         
         # 2. Применение FIFO
         final_trades_df = trades_for_processing.apply(self._apply_fifo, axis=1)
