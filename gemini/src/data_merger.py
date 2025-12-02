@@ -48,15 +48,16 @@ def merge_accounts(all_data: Dict[str, Dict[str, pd.DataFrame]]) -> pd.DataFrame
     unified_data = pd.concat(unified_df_list, ignore_index=True)
     
     # 3. Инициализация критических колонок, если они отсутствуют после объединения
-    CRITICAL_COLS = ['Currency', 'Quantity', 'Proceeds', 'Date/Time', 'Symbol', 'Action']
+    # Asset Category добавлена для поддержки фильтрации в main.py
+    CRITICAL_COLS = ['Currency', 'Quantity', 'Proceeds', 'Date/Time', 'Symbol', 'Action', 'Asset Category'] 
     for col in CRITICAL_COLS:
         if col not in unified_data.columns:
             print(f"WARNING: Critical column '{col}' is missing. Initializing with NaN/Default.")
             if col in ['Quantity', 'Proceeds']:
-                unified_data[col] = 0.0 # Используем 0.0 для Proceeds/Quantity в transfers
+                unified_data[col] = 0.0 
             elif col in ['Date/Time']:
                 unified_data[col] = pd.NaT
-            else: # Currency, Symbol, Action
+            else: # Currency, Symbol, Action, Asset Category
                 unified_data[col] = ''
     
     # 4. Фильтрация RUB
@@ -78,17 +79,15 @@ def merge_accounts(all_data: Dict[str, Dict[str, pd.DataFrame]]) -> pd.DataFrame
         proceeds = row['Proceeds']
         quantity = row['Quantity']
 
-        # 1. Обработка TRANSFER (для начального остатка)
+        # 1. Обработка TRANSFER
         if isinstance(action, str) and 'transfer' in action.lower():
-            # Inflow (Quantity > 0) должен стать BUY
             if quantity > 0:
                 return 'BUY'
-            # Outflow (Quantity < 0) должен стать SELL (хотя это обычно не облагается налогом)
             elif quantity < 0:
                 return 'SELL'
-            return action # Сохраняем TRANSFER, если Quantity = 0
+            return action 
 
-        # 2. Обработка Trades (как раньше: по знаку Proceeds)
+        # 2. Обработка Trades (по знаку Proceeds)
         elif isinstance(action, str) and 'trades' in action.lower():
             if proceeds > 0:
                 return 'SELL'  
@@ -110,7 +109,6 @@ def merge_accounts(all_data: Dict[str, Dict[str, pd.DataFrame]]) -> pd.DataFrame
 
     # 6. Очистка от строк с NaN в ключевых полях
     required_subset_for_dropna = ['Date/Time', 'Quantity', 'Proceeds', 'Currency', 'Symbol', 'Action']
-    # Применяем очистку к unified_data
     unified_data.dropna(subset=required_subset_for_dropna, inplace=True)
     
     if unified_data.empty:
@@ -123,8 +121,9 @@ def merge_accounts(all_data: Dict[str, Dict[str, pd.DataFrame]]) -> pd.DataFrame
     unified_data['Cost_PLN'] = 0.0
     unified_data['P/L_PLN'] = 0.0
     unified_data['Matched_Buy_Date'] = pd.NaT 
+    unified_data['Cost_Basis_Missing'] = False 
 
-    # 8. Сортировка (ВАЖНО: Transfers должны быть раньше Trades)
+    # 8. Сортировка
     unified_data.sort_values(by=['Date/Time'], inplace=True)
     
     return unified_data

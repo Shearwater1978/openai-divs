@@ -77,7 +77,7 @@ class StatementParser:
         column_mapping = {}
         raw_columns = list(df.columns)
         
-        # Шаг 1: Агрессивное сопоставление по названию для СТАНДАРТНЫХ полей (те, которые не ломаются)
+        # Шаг 1: Агрессивное сопоставление по названию для СТАНДАРТНЫХ полей 
         for col in raw_columns:
             cleaned_col = col.replace('.', '').replace('/', '').replace(' ', '').strip().lower()
             
@@ -87,7 +87,7 @@ class StatementParser:
             elif 'basis' in cleaned_col:
                 column_mapping[col] = 'Basis'
             
-            # Стандартные сопоставления для Trade-полей (если они не попадают в нестандартный формат)
+            # Стандартные сопоставления для Trade-полей 
             elif cleaned_col in ['action', 'buy/sell', 'buysell', 'code', 'transactiontype']:
                 column_mapping[col] = 'Action'
             elif cleaned_col in ['symbol', 'assetsymbol', 'tickersymbol', 'underlyingsymbol', 'futuresymbol']:
@@ -117,7 +117,6 @@ class StatementParser:
                     original_name = raw_columns[index]
                     
                     # Принудительно назначаем имя, перезаписывая, если оно было найдено Шагом 1
-                    # (это гарантирует, что мы возьмем колонку по правильному индексу)
                     column_mapping[original_name] = target_name
 
         
@@ -158,7 +157,8 @@ class StatementParser:
                 sep=self.delimiter,
                 encoding='utf-8',
                 skipinitialspace=True,
-                low_memory=False
+                low_memory=False,
+                on_bad_lines='skip' # <-- ИСПРАВЛЕНИЕ: Игнорируем строки с ошибками токенизации
             )
             
             df = df.dropna(how='all')
@@ -182,6 +182,7 @@ class StatementParser:
             return df
             
         except pd.errors.ParserError as e:
+            # После добавления on_bad_lines='skip', эта ошибка должна возникать реже
             print(f"Error parsing section: {e}")
             return None
         except Exception as e:

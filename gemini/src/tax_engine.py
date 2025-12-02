@@ -23,15 +23,14 @@ class TaxEngine:
             if symbol not in self.stock_history:
                 self.stock_history[symbol] = []
             
-            # --- ИСПРАВЛЕНИЕ: Обработка Transfers с нулевой ценой ---
-            # Стоимость (Proceeds) для Transferred-активов может быть 0.0
+            # --- КОРРЕКЦИЯ: Обработка Transfers с нулевой ценой ---
             cost_value = proceeds if pd.notna(proceeds) and proceeds != 0 else 0.0
             
             # Сохраняем покупку: (дата, количество, стоимость, валюта)
             self.stock_history[symbol].append({
                 'date': row['Date/Time'],
                 'qty': quantity,
-                'cost': cost_value, # Cost будет 0.0 для Transfers или отрицательным Proceeds для Trades
+                'cost': cost_value, 
                 'currency': currency
             })
             
@@ -44,7 +43,7 @@ class TaxEngine:
             else:
                  row['Cost_PLN'] = 0.0
                  
-            row['Cost_Basis_Missing'] = False # Покупка не является "проблемной" продажей
+            row['Cost_Basis_Missing'] = False
             return row
 
         elif action == 'SELL':
@@ -75,7 +74,6 @@ class TaxEngine:
                 qty_ratio = match_qty / buy_record['qty']
                 
                 # Стоимость в валюте покупки (Proceeds покупки всегда отрицателен или 0.0 для Transfer)
-                # Используем abs(cost), чтобы получить положительную стоимость
                 cost_in_buy_currency = abs(buy_record['cost']) * qty_ratio
                 
                 # Получаем курс для даты покупки (T-1 от даты покупки)
@@ -102,14 +100,14 @@ class TaxEngine:
 
             # Сохраняем самую старую дату покупки
             row['Matched_Buy_Date'] = matched_dates[0] if matched_dates else pd.NaT
-            row['Cost_Basis_Missing'] = False # Себестоимость найдена
+            row['Cost_Basis_Missing'] = False 
             
             # P/L = Proceeds_PLN (от продажи) - Total_Cost_PLN (от покупок)
             row['Cost_PLN'] = total_cost_pln
             row['P/L_PLN'] = row['Proceeds_PLN'] - total_cost_pln 
             return row
             
-        row['Cost_Basis_Missing'] = False # Все остальные операции не имеют проблемы с себестоимостью
+        row['Cost_Basis_Missing'] = False 
         return row
         
     def get_rate(self, currency: str, trade_date: datetime) -> Optional[float]:
@@ -137,10 +135,8 @@ class TaxEngine:
             return rate if pd.notna(rate) else None
         
         except IndexError:
-            # Нет курсов до даты T-1
             return None
         except KeyError:
-            # Ошибка индексации, например, неправильное имя колонки
             return None
         except Exception:
             return None
@@ -169,8 +165,6 @@ class TaxEngine:
             axis=1
         )
         
-        # Proceeds_PLN = Proceeds * PLN_Rate. 
-        # Если курс не найден (PLN_Rate=None/NaN), Proceeds_PLN остается 0.0
         trades_for_processing['Proceeds_PLN'] = np.where(
             trades_for_processing['PLN_Rate'].notna(),
             trades_for_processing['Proceeds'] * trades_for_processing['PLN_Rate'],
@@ -182,5 +176,19 @@ class TaxEngine:
         
         # 2. Применение FIFO
         final_trades_df = trades_for_processing.apply(self._apply_fifo, axis=1)
+        
+        # --- ФИНАЛЬНЫЙ ШАГ: ЯВНАЯ ФИЛЬТРАЦИЯ СТОЛБЦОВ ДЛЯ JSON ---
+        # Включаем Asset Category для поддержки main.py и Cost_Basis_Missing для JSON.
+        FINAL_COLUMNS = [
+            'Date/Time', 'Action', 'Symbol', 'Quantity', 'Proceeds', 'Currency', 
+            'Asset Category',      
+            'PLN_Rate', 'Proceeds_PLN', 'Cost_PLN', 'P/L_PLN', 
+            'Matched_Buy_Date', 
+            'Cost_Basis_Missing', # <-- ГАРАНТИЯ ВКЛЮЧЕНИЯ В JSON
+            'Account'
+        ]
+        
+        # Используем .reindex, чтобы создать DataFrame только с нужными колонками
+        final_trades_df = final_trades_df.reindex(columns=FINAL_COLUMNS)
         
         return final_trades_df

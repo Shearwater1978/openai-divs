@@ -1,159 +1,116 @@
-import pandas as pd
-import sys
 import os
-import json
-from datetime import date, timedelta # <-- Добавлен timedelta
-from typing import Dict, List, Set, Tuple
+import pandas as pd
+import json 
+from collections import defaultdict
+from datetime import datetime
+from src.parser import StatementParser
+from src.data_merger import merge_accounts
+from src.nbp_rates import NBPFetcher
+from src.tax_engine import TaxEngine
 
 # --- КОНФИГУРАЦИЯ ---
-DATA_DIR = "data" 
-OUTPUT_DIR = "output" 
-
-# Добавляем 'src' в системный путь для импорта модулей
-sys.path.append(os.path.join(os.path.dirname(__file__), 'src')) 
-
-# ИМПОРТЫ
-from src.parser import StatementParser
-from src.data_merger import merge_accounts 
-from src.nbp_api import NBPAPI
-from src.tax_engine import TaxEngine 
-
-# --- ГЛАВНАЯ ФУНКЦИЯ ---
+DATA_DIR = 'data'
+START_YEAR = 2021
+END_YEAR = 2022
+# --- ПУТИ ВЫВОДА ---
+OUTPUT_DIR = 'output' # Папка для сохранения
+OUTPUT_FILENAME = 'final_tax_report.json' # Имя файла
+OUTPUT_FULL_PATH = os.path.join(OUTPUT_DIR, OUTPUT_FILENAME) # Полный путь
+# -----------------------------
 
 def main():
+    print("--- IBKR PIT-38 ANALYZER START ---")
     
-    all_parsed_data = {}
+    all_raw_data = defaultdict(dict)
     all_currencies = set()
     
-    print("--- IBKR PIT-38 ANALYZER START ---")
-
-    # 2. ПАРСИНГ ВСЕХ ФАЙЛОВ ИЗ DATA_DIR
-    if not os.path.isdir(DATA_DIR):
-        print(f"Error: Directory '{DATA_DIR}' not found. Please create it and place your CSV reports inside.")
+    # 1. Сбор и парсинг всех отчетов
+    report_files = [f for f in os.listdir(DATA_DIR) if f.endswith('.csv')]
+    
+    for filename in report_files:
+        file_path = os.path.join(DATA_DIR, filename)
+        
+        # Получаем ключ аккаунта (предполагаем, что он в имени файла, например U7701359)
+        account_key = filename.split('_')[0] 
+        
+        print(f"Processing report: {filename}...")
+        
+        parser = StatementParser(file_path)
+        parsed_sections, discovered_currencies = parser.parse_statement()
+        
+        all_raw_data[account_key].update(parsed_sections)
+        all_currencies.update(discovered_currencies)
+        
+    # 2. Объединение и нормализация данных
+    unified_trades_df = merge_accounts(all_raw_data)
+    
+    if unified_trades_df.empty:
+        print("FATAL ERROR: No valid trades or transfers found after merging. Exiting.")
         return
 
-    # Итерация по всем CSV файлам в каталоге
-    for filename in os.listdir(DATA_DIR):
-        if filename.endswith('.csv'):
-            input_file = os.path.join(DATA_DIR, filename)
-            account_key = filename.replace('.csv', '') 
-            
-            print(f"Processing report: {filename}...")
-            parser = StatementParser(input_file)
-            
-            parsed_data, discovered_currencies = parser.parse_statement()
-            
-            if parsed_data:
-                all_parsed_data[account_key] = parsed_data
-                all_currencies.update(discovered_currencies)
-                
-    if not all_parsed_data:
-        print(f"Error: No CSV reports found in the '{DATA_DIR}' directory. Exiting.")
+    # Определяем период для загрузки курсов
+    if not unified_trades_df['Date/Time'].empty:
+        reporting_start_date = unified_trades_df['Date/Time'].min().date()
+        reporting_end_date = unified_trades_df['Date/Time'].max().date()
+        print(f"Reporting period (determined from trades): {reporting_start_date} to {reporting_end_date}")
+    else:
+        print("WARNING: Could not determine reporting period from trades.")
         return
         
-    # 3. ОБЪЕДИНЕНИЕ И СТАНДАРТИЗАЦИЯ
-    unified_trades = merge_accounts(all_parsed_data) # <-- data_merger.py фильтрует RUB
+    # 3. Загрузка курсов NBP (T-1)
     
-    # После фильтрации в data_merger.py, unified_trades может быть пустым
-    if unified_trades.empty:
-        print("No trade data available after merging (or all were filtered out). Exiting.")
-        return
-
-    # --- 1. ОПРЕДЕЛЕНИЕ ОБЩЕГО ДИАПАЗОНА ДАТ ---
+    # Исключаем PLN, так как курс 1.0
+    foreign_currencies = all_currencies - {'PLN'}
+    print(f"DEBUG: Discovered foreign currencies: {foreign_currencies}")
     
-    try:
-        # Самая ранняя и самая поздняя дата сделок
-        min_trade_date = unified_trades['Date/Time'].min().date()
-        end_date = unified_trades['Date/Time'].max().date()
-        
-        # Добавляем запас в 3 дня к начальной дате для гарантии T-1 курса
-        start_date = min_trade_date - timedelta(days=3)
-        
-    except Exception as e:
-        print(f"ERROR: Failed to determine date range from trades ({e}). Using default 2021 period.")
-        start_date = date(2021, 1, 1)
-        end_date = date(2021, 12, 31)
-
-    print(f"Reporting period (determined from trades): {start_date} to {end_date}")
+    nbp_fetcher = NBPFetcher(foreign_currencies)
+    all_rates = nbp_fetcher.fetch_all_rates(reporting_start_date, reporting_end_date)
     
-    # 4. РАСЧЕТ КУРСОВ ВАЛЮТЫ (PLN)
-    
-    # ИСКЛЮЧАЕМ RUB, так как NBP не предоставляет курсы для этой валюты
-    EXCLUDED_CURRENCIES = {'PLN', 'RUB'}
-    
-    # Определяем, какие валюты нужно конвертировать
-    currencies_to_fetch = all_currencies - EXCLUDED_CURRENCIES
-    print(f"DEBUG: Discovered foreign currencies: {currencies_to_fetch}")
-    
-    # Курс PLN/PLN = 1.0 
-    all_rates = {'PLN': pd.DataFrame({'Rate_PLN_PLN': 1.0}, index=[0])}
-
-    # Загружаем курсы для иностранных валют
-    nbp_api = NBPAPI(start_date, end_date) # NBPAPI.fetch_rates разбивает запрос на части по 365 дней
-    for currency in currencies_to_fetch:
-        rates = nbp_api.fetch_rates(currency)
-        if not rates.empty:
-            all_rates[currency] = rates
-            print(f"DEBUG: Successfully cached {len(rates)} rates for {currency}.")
-        else:
-            print(f"WARNING: Could not fetch rates for {currency}. Conversion calculations will fail.")
-            
-    # 5. НАЛОГОВЫЕ РАСЧЕТЫ (Tax Engine)
+    # 4. Расчет налога (FIFO, конвертация)
     print("\n--- НАЧАЛО НАЛОГОВОГО РАСЧЕТА ---")
-    engine = TaxEngine(unified_trades, all_rates)
-    final_report_df = engine.calculate_tax()
+    tax_engine = TaxEngine(unified_trades_df, all_rates)
+    final_report_df = tax_engine.calculate_tax()
     
     if final_report_df.empty:
-        print("Tax engine returned an empty report. Check for missing rates or data.")
+        print("FATAL ERROR: Tax calculation returned empty data. Exiting.")
         return
 
-    # --- ФИНАЛЬНЫЙ ОТЧЕТ И ЭКСПОРТ В JSON ---
+    # DEBUG: Проверка наличия всех колонок перед сохранением
+    print(f"DEBUG FINAL COLUMNS: {list(final_report_df.columns)}")
+    
+    # 5. Генерация финального отчета
     print("\n--- ФИНАЛЬНЫЙ ОТЧЕТ (ИТОГОВЫЕ РАСЧЕТЫ) ---")
     
-    # Расчет финальных сумм для PIT-38
+    # Фильтруем только акции для суммирования P/L
     stocks_summary = final_report_df[final_report_df['Asset Category'] == 'Stocks'].agg({
         'Proceeds_PLN': 'sum',
         'Cost_PLN': 'sum',
         'P/L_PLN': 'sum'
     })
-    
-    forex_summary = final_report_df[final_report_df['Asset Category'] == 'Forex'].agg({
-        'P/L_PLN': 'sum'
-    })
 
-    # Собираем финальный JSON-объект
-    final_json_data = {
-        "reporting_period": f"{start_date.isoformat()} to {end_date.isoformat()}",
-        "summary_pit_38_pln": {
-            "stocks_total": {
-                "proceeds_pln": round(stocks_summary.loc['Proceeds_PLN'], 2),
-                "cost_pln": round(stocks_summary.loc['Cost_PLN'], 2),
-                "pl_pln": round(stocks_summary.loc['P/L_PLN'], 2)
-            },
-            "forex_total": {
-                "pl_pln": round(forex_summary.loc['P/L_PLN'], 2) if 'P/L_PLN' in forex_summary else 0.0
-            }
-        },
-        "details_by_trade": final_report_df[['Date/Time', 'Action', 'Symbol', 'Quantity', 'Proceeds', 'PLN_Rate', 'Proceeds_PLN', 'Cost_PLN', 'P/L_PLN', 'Matched_Buy_Date']].to_dict('records')
-    }
+    print(f"\nСводка по акциям ({START_YEAR}-{END_YEAR}):")
+    print(f"  Продажи (PLN): {stocks_summary['Proceeds_PLN']:.2f}")
+    print(f"  Себестоимость (PLN): {stocks_summary['Cost_PLN']:.2f}")
+    print(f"  Прибыль/Убыток (PLN): {stocks_summary['P/L_PLN']:.2f}")
+    
+    # --- СЕКЦИЯ СОХРАНЕНИЯ JSON (ИСПРАВЛЕНИЕ ОШИБКИ ТИПА И ПУТИ) ---
+    
+    # 1. Принудительно преобразуем объекты дат и времени в строки для корректной JSON-сериализации.
+    final_report_df['Date/Time'] = final_report_df['Date/Time'].dt.strftime('%Y-%m-%dT%H:%M:%S')
+    final_report_df['Matched_Buy_Date'] = final_report_df['Matched_Buy_Date'].astype(str)
+    
+    # 2. Преобразуем DataFrame в список словарей
+    final_data_list = final_report_df.to_dict(orient='records')
+    
+    # 3. Гарантируем существование папки output
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR)
 
-    # Вывод в консоль
-    json_output = json.dumps(final_json_data, indent=4, default=str, ensure_ascii=False)
-    
-    print("\n--- ФИНАЛЬНЫЙ JSON-ОТЧЕТ ДЛЯ PIT-38 ---")
-    # print(json_output)
-    
-    # --- Сохранение в файл с использованием OUTPUT_DIR ---
-    output_filename_base = f"pit_38_report_{start_date.year}.json"
-    output_filepath = os.path.join(OUTPUT_DIR, output_filename_base)
-    
-    # Создаем каталог 'output', если он не существует
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    
-    with open(output_filepath, 'w', encoding='utf-8') as f:
-        f.write(json_output)
+    # 4. Сохраняем в файл, используя полный путь
+    with open(OUTPUT_FULL_PATH, 'w', encoding='utf-8') as f:
+        json.dump(final_data_list, f, indent=4, ensure_ascii=False)
         
-    print(f"\nОтчет сохранен в файл: {output_filepath}")
+    print(f"\nОтчет успешно сохранен в: {OUTPUT_FULL_PATH}")
 
 
 if __name__ == "__main__":
