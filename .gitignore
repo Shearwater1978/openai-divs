@@ -4,4 +4,4 @@ broker_reports/*
 tax_reports/*
 **/cache/
 .python-version
-
+**/*.csv*

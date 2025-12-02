@@ -1,0 +1,13 @@
+# Data handling and analysis
+pandas
+
+# API requests
+requests
+
+# Date/Time and Holiday handling (Crucial for T-1 NBP rule)
+holidays
+
+# PDF generation
+fpdf2 
+# For generating charts in the PDF report (optional, but needed for the functionality planned)
+matplotlib

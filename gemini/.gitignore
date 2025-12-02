@@ -1,0 +1,41 @@
+# ----------------------------------
+# Python Artifacts and Environments
+# ----------------------------------
+__pycache__/
+*.pyc
+*.pyd
+*.so
+
+# Virtual environment directories
+venv/
+.venv/
+env/
+/bin/
+/lib/
+/include/
+pip-log.txt
+
+# Installer artifacts
+*.egg-info/
+dist/
+build/
+
+# ----------------------------------
+# IDE and OS Files
+# ----------------------------------
+.DS_Store               # macOS
+.idea/                  # PyCharm / IntelliJ
+.vscode/                # VS Code
+
+# ----------------------------------
+# Project Specific Data and Outputs
+# ----------------------------------
+# Ignore the entire output directory (JSON, PDF reports)
+output/
+
+# Ignore large IBKR report files in the data directory
+# We keep the 'data/' directory itself for project structure, 
+# but ignore the large CSV and potential XML files.
+data/*.csv
+data/*.xml
+data/*.json

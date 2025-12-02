@@ -1,0 +1,64 @@
+import pandas as pd
+import requests
+from datetime import date
+from typing import Optional, Dict
+
+class NBPAPI:
+    """
+    Класс для получения исторических курсов валют (USD, EUR и т.д.) 
+    от Национального банка Польши (NBP).
+    """
+
+    BASE_URL = "http://api.nbp.pl/api/exchangerates/rates/a/"
+
+    def __init__(self, start_date: date, end_date: date):
+        self.start_date = start_date
+        self.end_date = end_date
+        self._rate_cache = {}
+
+    def _fetch_data_from_api(self, currency: str) -> Optional[dict]:
+        """Запрашивает данные NBP API."""
+        
+        endpoint = (
+            f"{self.BASE_URL}{currency}/{self.start_date.isoformat()}/"
+            f"{self.end_date.isoformat()}/"
+        )
+        headers = {"Accept": "application/json"}
+        
+        try:
+            response = requests.get(endpoint, headers=headers)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.HTTPError as e:
+            if response.status_code == 404:
+                print(f"NBP API: No data found for {currency} in the specified period.")
+                return None
+            print(f"NBP API Error for {currency}: {e}")
+            return None
+        except requests.exceptions.RequestException as e:
+            print(f"Connection Error: {e}")
+            return None
+
+    def fetch_rates(self, currency: str) -> pd.DataFrame:
+        """Получает курсы и сохраняет их в DataFrame."""
+        currency = currency.upper().strip()
+
+        if currency in self._rate_cache:
+            return self._rate_cache[currency]
+
+        data = self._fetch_data_from_api(currency)
+        
+        if data and 'rates' in data:
+            rates_list = data['rates']
+            df = pd.DataFrame(rates_list)
+            
+            rate_col = f'Rate_{currency}_PLN'
+            df.rename(columns={'mid': rate_col}, inplace=True) 
+            df['effectiveDate'] = pd.to_datetime(df['effectiveDate'])
+            df.set_index('effectiveDate', inplace=True)
+            
+            self._rate_cache[currency] = df
+            print(f"Successfully cached {len(df)} rates for {currency}.")
+            return df
+        else:
+            return pd.DataFrame()
